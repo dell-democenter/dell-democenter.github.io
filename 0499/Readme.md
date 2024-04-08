@@ -15,8 +15,8 @@ Tabelle
 
 Module | Title | Link
 ------:|---------------------|---
-0 | Prerequisite | [linkname](fad ( asbolut oder relativ)
-1 | relativ | [Module 1](Module_1.md)
+0 | Prerequisite | [linkname](pfad, asbolut oder relativ)
+1 | relativ | [Module 1](./Module_1.md)
 2 | absolut | [Absolut Name ](https://www.absolut.com/de-de/)
 
 
