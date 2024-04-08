@@ -4,7 +4,7 @@
 
 # lab overview
 systems / workloads / connectivity 
-![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/167698f2-0d6e-4a2f-9606-dae82823f6ce)
+![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/c6c7933c-7002-4862-805c-c745375c549d)
 
 # account and passwords  
 Username depends, as always, on the workload or the device you want to login or manage   
