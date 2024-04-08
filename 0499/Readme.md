@@ -7,8 +7,8 @@ systems / workloads / connectivity
 ![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/167698f2-0d6e-4a2f-9606-dae82823f6ce)
 
 # account and passwords  
-Username depends as always of the workload or the device you want to login or manage   
-Rule of thumb for password is always: **“Password123!”**   
+Username depends, as always, on the workload or the device you want to login or manage   
+Rule of thumb for password is always: **Password123!**
 
 Exceptions listed here: 
 FDQN | account/password | workload  |  notes  
