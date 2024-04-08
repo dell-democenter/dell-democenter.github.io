@@ -25,9 +25,9 @@ K8scl1-pool1…  |		bobuser  |		Kubernetes cluster 	k8s  |	 workload with 
 rancher  |		ubuntu  |		Rancher  |		K8s manager for cluster/pods  
 nve-1  |		administrator  |		Networker  |	legay dataprotection 	
 nve-1-vproxy  |		admin  |		vproxy 	
-ora1  |		root or oracle  |		Oracle 19c  |	 DG active  |		Data guard node 
-ora2  |		root or oracle  |		Oracle 19c  |	DG standby  |		Data guard node 
-ppdm-1 	Admin 	PPDM 19.12 	
+ora1  |		root or oracle|Oracle 19c  |	 DG active  |		Data guard node 
+ora2  |		root or oracle|Oracle 19c  |	DG standby  |		Data guard node 
+ppdm-1  | admin  | PP Datamanager  	
 ppdm-1-search 		PPDM search node 	
 ppdm-1-report 		PPDM report node 	
 sql03 - 04 	administrator@demo.local 	SQL 2019 AAG 	treated as vm for app ware backup 
