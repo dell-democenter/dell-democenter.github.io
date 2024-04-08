@@ -23,4 +23,7 @@ Module | Title | Link
 ```bash
 rm -rf /
 ```
+```Powershell
+get-help -module dau
+```
 
