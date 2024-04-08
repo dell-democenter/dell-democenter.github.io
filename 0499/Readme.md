@@ -5,9 +5,14 @@ Goal of the 0499 HOL is to have a kind of playground that represents a â€œrealâ€
 systems / workloads / connectivity 
 ![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/167698f2-0d6e-4a2f-9606-dae82823f6ce)
 
-
 # useraccount and passwords
+Tabelle
 
+FDQN | account | workload  |  notes
+------:|---------------------|---
+0 | Prerequisite | [linkname](pfad, asbolut oder relativ)
+1 | relativ | [Module 1](./Module_1.md)
+2 | absolut | [Absolut Name ](https://www.absolut.com/de-de/)
 
 das ist ein neuer text
 mega !!!  
