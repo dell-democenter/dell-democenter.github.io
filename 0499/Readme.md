@@ -8,9 +8,20 @@ systems / workloads / connectivity
 # useraccount and passwords
 Tabelle
 
-FDQN | account | workload  |  notes
-------:|---------------------|---
-0 | Prerequisite | [linkname](pfad, asbolut oder relativ)
+FDQN | account | workload  |  notes  
+------|---------------------|------------|-----------  
+vcenter01 | administrator@vsphere.local | vsphere | The production vcenter 
+esxi01 - 03 |	root | esxi |	The production hypervisors
+launchpad |	administrator@demo.local |	Your jumpbox 	AD for “demo.local” / DNS / DHCP 
+ddve-01 	sysadmin 	PPDD 	The primary protection target 
+ddve-02 	sysadmin 	PPDD 	The secondary protection target 
+			
+sql01 - 02 	administrator@demo.local 	SQL 2019 AAG 	treated as bare-metal SQL DB 
+vault-esxi 	root 	esxi  	for simulating a CR vault area 
+
+
+
+ | Prerequisite | [linkname](pfad, asbolut oder relativ)
 1 | relativ | [Module 1](./Module_1.md)
 2 | absolut | [Absolut Name ](https://www.absolut.com/de-de/)
 
