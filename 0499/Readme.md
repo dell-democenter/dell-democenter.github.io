@@ -6,14 +6,12 @@ systems / workloads / connectivity
 ![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/167698f2-0d6e-4a2f-9606-dae82823f6ce)
 
 # useraccount and passwords
-Tabelle
-
 FDQN | account | workload  |  notes  
 ------|---------------------|------------|-----------  
 vcenter01 | administrator@vsphere.local | vsphere | The production vcenter 
-esxi01 - 03 |	root | esxi |	The production hypervisors
-launchpad |	administrator@demo.local |	Your jumpbox 	AD for “demo.local” / DNS / DHCP 
-ddve-01 	sysadmin 	PPDD 	The primary protection target 
+esxi01 - 03 | root | esxi | The production hypervisors
+launchpad | administrator@demo.local | Your jumpbox is AD controller for “demo.local” and DHCP + DNSserver 
+ddve-01 | sysadmin | PPDD | The primary protection target 
 ddve-02 	sysadmin 	PPDD 	The secondary protection target 
 			
 sql01 - 02 	administrator@demo.local 	SQL 2019 AAG 	treated as bare-metal SQL DB 
