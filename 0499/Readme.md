@@ -1,6 +1,7 @@
 # what is HOL-0499 ?  
 ### goal is to have have a kind of playground that represents a “realistic” customer environment with several workloads.
-### goal is to install and configure all DELL solution from scratch, either manual or automated via ansbile to gain experience on your own !
+### goal is to install and configure all DELL solution from scratch to gain experience on your own !
+
 # lab overview
 systems / workloads / connectivity 
 ![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/167698f2-0d6e-4a2f-9606-dae82823f6ce)
