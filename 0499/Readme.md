@@ -1,5 +1,5 @@
 # what is HOL-0499 ?  
-### goal is to have have a kind of playground that represents a “realistic” customer environment with several workloads.
+### goal is to have a playground that represents a “realistic” customer environment with several workloads.
 ### goal is to install and configure all DELL solution from scratch to gain experience on your own !
 
 # lab overview
