@@ -1,11 +1,22 @@
-# what is 0499 ?  
-Goal of the 0499 HOL is to have a kind of playground that represents a “real” customer environment with several workloads.
-
+# what is HOL-0499 ?  
+### goal is to have have a kind of playground that represents a “realistic” customer environment with several workloads.
+### goal is to install and configure all DELL solution from scratch, either manual or automated via ansbile to gain experience on your own !
 # lab overview
 systems / workloads / connectivity 
 ![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/167698f2-0d6e-4a2f-9606-dae82823f6ce)
 
-# useraccount and passwords
+# account and passwords  
+Username depends as always of the workload or the device you want to login or manage   
+Rule of thumb for password is always: **“Password123!”**   
+
+Exceptions listed here: 
+FDQN | account/password | workload  |  notes  
+------|---------------------|------------|-----------  
+vault-ppdm | root/changeme | ppdm in the vault | OS level
+vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
+cs.demo.local | admin/admin | cybersense | password policy is ...
+
+# workloads
 FDQN | account | workload  |  notes  
 ------|---------------------|------------|-----------  
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter 
@@ -31,9 +42,9 @@ nve-1  |		administrator  |		Networker  |	legay dataprotection 
 nve-1-vproxy  |		admin  |		vproxy 	
 ora1  |		root or oracle | Oracle 19c  |	DG active |		Data guard node 
 ora2  |		root or oracle | Oracle 19c  |	DG standby |	Data guard node 
-ppdm-1  | admin  | PP Data Manager  	
-ppdm-1-search | PPDM search node 	
-ppdm-1-report | PPDM report node 	
+ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI
+ppdm-1-search | | PPDM search node 	
+ppdm-1-report | | PPDM report node 	
 sql03 - 04 | administrator@demo.local | SQL 2022 AAG | treated as vm for app ware backup 
 vault-esxi | root | esxi | for simulating a CR vault area 
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault 
