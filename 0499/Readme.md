@@ -27,17 +27,16 @@ nve-1  |		administrator  |		Networker  |	legay dataprotection 
 nve-1-vproxy  |		admin  |		vproxy 	
 ora1  |		root or oracle|Oracle 19c  |	 DG active  |		Data guard node 
 ora2  |		root or oracle|Oracle 19c  |	DG standby  |		Data guard node 
-ppdm-1  | admin  | PP Datamanager  	
-ppdm-1-search 		PPDM search node 	
-ppdm-1-report 		PPDM report node 	
-sql03 - 04 	administrator@demo.local 	SQL 2019 AAG 	treated as vm for app ware backup 
-			
-vault-vcenter 	administrator@vsphere.local 	vSphere for the vault 	The separated vcenter in the vault 
-vault-ppdm 	root/changeme 	ppdm for the vault 	ppdm is waiting in “install screen” 
-vault-ddve 	sysadmin 	PPDD for the vault 	The separated protection target 
-cr 	crso 	PPCR for the vault 	Vault CyberRecovery Manager 
-cs 	admin/admin 	CyberSense 8.0 	Optional deep forensic 
-![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/1f5d6448-1a2c-4c70-bc43-a940feb2c9f4)
+ppdm-1  | admin  | PP Data Mmanager  	
+ppdm-1-search|PPDM search node 	
+ppdm-1-report|PPDM report node 	
+sql03 - 04 |administrator@demo.local|SQL 2022 AAG |treated as vm for app ware backup 
+vault-vcenter |	administrator@vsphere.local |vSphere for the vault|The separated vcenter in the vault 
+vault-ppdm |root/changeme |ppdm for the vault |ppdm is waiting in “install screen” 
+vault-ddve |sysadmin |PPDD for the vault |the separated protection target 
+cr| rso| PPCR for the vault|vault CyberRecovery Manager 
+cs|admin/admin|	CyberSense  |Optional deep forensic 
+
 
 
 
