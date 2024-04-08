@@ -1,3 +1,6 @@
+# what is 0499 ?  
+Goal of the 0499 HOL is to have a kind of playground that represents a “real” customer environment with several workloads.
+
 # lab overview
 systems / workloads / connectivity     
 ![bild eines super DAU](https://github.com/dell-democenter/dell-democenter.github.io/assets/8255007/0b02e904-75b7-425c-8c37-abb107578023)
