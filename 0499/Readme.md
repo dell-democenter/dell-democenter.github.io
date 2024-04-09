@@ -3,7 +3,7 @@
 ### goal is to install and configure all DELL solution from scratch to gain experience on your own !
 
 # lab overview
-systems / workloads / connectivity 
+### systems / workloads / connectivity 
 ![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/c6c7933c-7002-4862-805c-c745375c549d)
 
 # account and passwords  
