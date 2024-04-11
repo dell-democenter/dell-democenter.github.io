@@ -68,6 +68,16 @@ firefox "should" be used as default browser. it´s feature to pre-fill user and 
 ### Data Studiio Client (IBM)
 nice java UI for accessing the DB2 single node instance and the oracle dataguard cluster.
 for those how wants to see that the a DB is alive/mounted and able to create entrys.
+### SAP HANA Studio
+nice java UI for accessing the HANA HXE single node instance.
+###WinSCP 
+well known tool for transferring files to linux systems.
+
+
+
+## vcenter01 (by broadcomm)
+use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcomm. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
+
 
 
 ## wac (windows admin center)
