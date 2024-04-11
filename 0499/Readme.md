@@ -63,7 +63,8 @@ it runs an **DHCP** and **DNS** server, the DHCP server updates all hostnames fr
 any manual configured IP have to to manual maintained in the DNS server.
 ### mremoteNG
 contains pre-configured SSH and RDP sessions for almost all workloads and systems
-### firefox
+### browser
+firefix "should" be used as default browser. it´s feature to pre-fill user and password fields makes really easy and fast to access the UI of all systems. 
 
 
 
