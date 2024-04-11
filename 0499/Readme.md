@@ -57,13 +57,13 @@ cs | admin/admin |	CyberSense  | Optional deep forensic 
 
 
 # systems in detail  
-### lauchpad  
+## lauchpad  
 has the function to be the initial place for accessing the 0499 lab environment. it runs the AD controller role for "demo.local". 
 it runs an **DHCP** and **DNS** server, the DHCP server updates all hostnames from any linux/windows to the DNS server. means if you deploy a linux or windows vm that hostname will listed and updated in the DNS server automatically. result is a pretty good name reolution in your lab.
 any manual configured IP have to to manual maintained in the DNS server.
-#### mremoteNG
+### mremoteNG
 contains pre-configured SSH and RDP sessions for almost all workloads and systems
-#### firefox
+### firefox
 
 
 
