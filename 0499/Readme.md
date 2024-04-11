@@ -76,6 +76,10 @@ well known tool for transferring files to linux systems.
 ## vcenter01 (by broadcomm)
 use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcomm. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
 
+## ansible
+a linux host preconfigured to run automation with ansible playbooks.
+
+
 ## mail /exchange1 / exchange2
 this exchange dag let you reiceive and send email just internally. it not (yet) relaying any SMTP mails.
 the name of IP less DAG is "mail.demo.local" residing on two nodes "exchange1" and "exchange2"
@@ -108,6 +112,14 @@ fresh deployed, joinded the demo.local domain. has some file in the \\powerscale
 
 ## openshift
 3 node openshuft cluster. running mysql and wordpress workload. intend to be used for demontrating the K8s workload in PPDM
+
+## rancher 
+single node rancher. running mysql and wordpress workload. intend to be used for demontrating the K8s workload in PPDM
+
+## nas 
+is running rocky linux and doing the NFS datstore jov for the esxi cluster.
+
+
 
 
 
