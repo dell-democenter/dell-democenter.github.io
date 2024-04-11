@@ -90,6 +90,25 @@ report and index engine are already deployed.
 is fresh installed and has just the "vcenter01" configured.
 it is doing VADP protection of all vsphere vm's, so if you mess something up, stay cool, you have a backup.
 
+## ddmc
+fresh deployed, nothing configured
+
+## DPA
+fresh deployed, nothing configured
+
+## DPC
+fresh deployed, nothing configured
+
+## powerstore
+fresh deployed, nothing configured
+intend to be used when demonstrating synergy in dell primary storage <> backup storage, orchestrated by PowerProtect
+
+## powerscale
+fresh deployed, joinded the demo.local domain. has some file in the \\powerscale\
+
+
+
+
 
 ## wac (windows admin center)
 the "option" to have a nice HTML5 UI for managing windows systems.
