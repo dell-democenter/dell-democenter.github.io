@@ -101,11 +101,13 @@ fresh deployed, nothing configured
 
 ## powerstore
 fresh deployed, nothing configured
-intend to be used when demonstrating synergy in dell primary storage <> backup storage, orchestrated by PowerProtect
+intend to be used when demonstrating synergy between dell primary storage <> backup storage, orchestrated by PowerProtect
 
 ## powerscale
-fresh deployed, joinded the demo.local domain. has some file in the \\powerscale\
+fresh deployed, joinded the demo.local domain. has some file in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
 
+## openshift
+3 node openshuft cluster. running mysql and wordpress workload. intend to be used for demontrating the K8s workload in PPDM
 
 
 
