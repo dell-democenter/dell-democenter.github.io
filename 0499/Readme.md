@@ -73,11 +73,22 @@ nice java UI for accessing the HANA HXE single node instance.
 ###WinSCP 
 well known tool for transferring files to linux systems.
 
-
-
 ## vcenter01 (by broadcomm)
 use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcomm. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
 
+## mail /exchange1 / exchange2
+this exchange dag let you reiceive and send email just internally. it not (yet) relaying any SMTP mails.
+the name of IP less DAG is "mail.demo.local" residing on two nodes "exchange1" and "exchange2"
+some system are already configured to send email like ASUPś and so on. try to configure it for your workload.
+
+## ppdm-1
+is fresh installed and has just the "vcenter01" asset configured.
+it is doing TSDM protection of all vsphere vm's, so if you mess something up, stay cool, you have a backup.
+report and index engine are already deployed.
+
+## nve-1
+is fresh installed and has just the "vcenter01" configured.
+it is doing VADP protection of all vsphere vm's, so if you mess something up, stay cool, you have a backup.
 
 
 ## wac (windows admin center)
