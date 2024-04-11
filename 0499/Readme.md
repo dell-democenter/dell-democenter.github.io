@@ -34,7 +34,7 @@ dpc |	administrator@dpc.local  | DPC 
 exchange1 - 2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system 
 file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server 
 hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA 
-openshift  |		admin  |		openshift cluster  |	 	Kubernetes from IBM 
+openshift  |		kubeadmin  |		openshift cluster  |	 	Kubernetes from IBM 
 powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD
 powerstore  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD
 K8scl1-pool1…  |		bobuser  |		Kubernetes cluster 	k8s  |	 workload with wordpress/mysql 
