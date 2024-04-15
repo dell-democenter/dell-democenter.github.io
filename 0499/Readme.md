@@ -1,3 +1,5 @@
+># **FOR ACTUAL ISSUES SEE BELOW "actual issues"**
+
 # what is HOL-0499 ?  
 ### goal is to have a playground that represents a “realistic” customer environment with several workloads.
 ### goal is to install and configure all DELL solution from scratch to gain experience on your own !
@@ -119,11 +121,6 @@ single node rancher. running mysql and wordpress workload. intend to be used for
 ## nas 
 is running rocky linux and doing the NFS datstore jov for the esxi cluster.
 
-
-
-
-
-
 ## wac (windows admin center)
 the "option" to have a nice HTML5 UI for managing windows systems.
 **MUST** be access by edge, it's not working with firefox
@@ -131,16 +128,23 @@ the "option" to have a nice HTML5 UI for managing windows systems.
 
 
 
-
-## Header 1
-
-### Header 2
-
-##### Header 3
+# actual issues 
+## openshift cluster not starting (SOLUTION)  
+- start ansible vm
+- login via ssh as admin into ansible vm
+- export k8s envvironment and get new certificates
+  
 ```bash
-rm -rf /
+export KUBECONFIG=~/workspace/openshift/auth/kubeconfig
+oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve
+
 ```
-```Powershell
-get-help -module dau
-```
+- wait for at least 10 minutes
+
+## vm's did not get DHCP ip adress
+- networking issue in the underlying democenter infrastructure.
+- cancel the lab and deploy a new one
+
+
+
 
