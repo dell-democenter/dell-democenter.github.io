@@ -139,7 +139,8 @@ export KUBECONFIG=~/workspace/openshift/auth/kubeconfig
 oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve
 
 ```
-- wait for at least 10 minutes
+- wait for at least 5 minutes
+- if openshift cluster is still not starting - repeat the CLI commands
 
 ## vm's did not get DHCP ip adress
 - networking issue in the underlying democenter infrastructure.
