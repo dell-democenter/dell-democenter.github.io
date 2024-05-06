@@ -123,7 +123,7 @@ is running rocky linux and doing the NFS datstore jov for the esxi cluster.
 
 ## wac (windows admin center)
 the "option" to have a nice HTML5 UI for managing windows systems.
-**MUST** be access by edge, it's not working with firefox
+**MUST** be accessed by edge, it's not working with firefox
 
 
 
