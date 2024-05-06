@@ -75,8 +75,8 @@ nice java UI for accessing the HANA HXE single node instance.
 ###WinSCP 
 well known tool for transferring files to linux systems.
 
-## vcenter01 (by broadcomm)
-use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcomm. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
+## vcenter01 (by broadcom)
+use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcom. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
 
 ## ansible
 a linux host preconfigured to run automation with ansible playbooks.
