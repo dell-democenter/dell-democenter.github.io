@@ -1,4 +1,4 @@
-># **FOR ACTUAL ISSUES SEE BELOW "actual issues"**
+># **FOR ACTUAL ISSUES SEE BELOW [actual issues](./#actual-issues)**
 
 # what is HOL-0499 ?  
 ### goal is to have a playground that represents a “realistic” customer environment with several workloads.
