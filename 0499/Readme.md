@@ -67,7 +67,7 @@ any manual configured IP have to to manual maintained in the DNS server.
 contains pre-configured SSH and RDP sessions for almost all workloads and systems
 ### browser
 firefox "should" be used as default browser. it´s feature to pre-fill user and password fields makes it really easy and fast to access the UI of all systems. edge **MUST** be used for windows admin center.
-### Data Studiio Client (IBM)
+### Data Studio Client (IBM)
 nice java UI for accessing the DB2 single node instance and the oracle dataguard cluster.
 for those how wants to see that the a DB is alive/mounted and able to create entrys.
 ### SAP HANA Studio
