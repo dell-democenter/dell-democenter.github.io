@@ -142,6 +142,17 @@ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{
 - wait for at least 5 minutes
 - if openshift cluster is still not starting - repeat the CLI commands
 
+## DPC login in UI not possible (SOLUTION)
+- ssh into DPC via mremoteNG
+```bash
+sudo /usr/local/dpc/bin/dpc start
+```
+- check that all services are in state "active" (except FIPS ;-)
+```bash
+sudo /usr/local/dpc/bin/dpc status
+```
+- wait 1-2 minutes and try to login in UI again
+
 ## vm's did not get DHCP ip adress
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
