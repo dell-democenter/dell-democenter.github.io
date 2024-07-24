@@ -39,8 +39,8 @@ hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA 
 openshift  |		kubeadmin  |		openshift cluster  |	 	Kubernetes from IBM 
 powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD
 powerstore  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD
-K8scl1-pool1…  |		bobuser  |		Kubernetes cluster 	k8s  |	 workload with wordpress/mysql 
-rancher  |		ubuntu  |		Rancher  |		K8s manager for cluster/pods  
+
+
 nve-1  |		administrator  |		Networker  |	legay dataprotection 	
 nve-1-vproxy  |		admin  |		vproxy 	
 ora1  |		root or oracle | Oracle 19c  |	DG active |		Data guard node 
@@ -93,7 +93,7 @@ it is doing TSDM protection of all vsphere vm's, so if you mess something up, st
 report and index engine are already deployed.
 
 ## nve-1
-is fresh installed and has just the "vcenter01" configured.
+is fresh installed and has just the "vcenter01" for image backup configured.
 it is doing VADP protection of all vsphere vm's, so if you mess something up, stay cool, you have a backup.
 
 ## ddmc
@@ -115,17 +115,12 @@ fresh deployed, joinded the demo.local domain. has some file in the \\powerscale
 ## openshift
 3 node openshuft cluster. running mysql and wordpress workload. intend to be used for demontrating the K8s workload in PPDM
 
-## rancher 
-single node rancher. running mysql and wordpress workload. intend to be used for demontrating the K8s workload in PPDM
-
 ## nas 
 is running rocky linux and doing the NFS datstore jov for the esxi cluster.
 
 ## wac (windows admin center)
 the "option" to have a nice HTML5 UI for managing windows systems.
 **MUST** be accessed by edge, it's not working with firefox
-
-
 
 
 # actual issues 
