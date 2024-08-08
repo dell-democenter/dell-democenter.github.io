@@ -12,6 +12,10 @@
 Username depends, as always, on the workload or the device you want to login or manage   
 Rule of thumb for password is always: **Password123!**
 
+# FQDN and DNS suffix  
+***.demo.local** is the usual DNS suffix
+as rule of thumb: use ALWAYS FQDN !!!
+
 Exceptions listed here: 
 FDQN | account/password | workload  |  notes  
 ------|---------------------|------------|-----------  
