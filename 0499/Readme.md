@@ -15,7 +15,7 @@ Rule of thumb for password is always: **Password123!**
 Exceptions listed here: 
 FDQN | account/password | workload  |  notes  
 ------|---------------------|------------|-----------  
-vault-ppdm | root/changeme | ppdm in the vault | OS level
+vault-ppdm | root/changeme | ppdm in the vault | OS level
 vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
 cs.demo.local | admin/Password123456! | cybersense | 
 
