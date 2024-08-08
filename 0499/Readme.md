@@ -17,7 +17,7 @@ FDQN | account/password | workload  |  notes
 ------|---------------------|------------|-----------  
 vault-ppdm | root/changeme | ppdm in the vault | OS level
 vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
-cs.demo.local | admin/admin | cybersense | password policy is ...
+cs.demo.local | admin/Password123456! | cybersense | 
 
 # workloads
 FDQN | account | workload  |  notes  
