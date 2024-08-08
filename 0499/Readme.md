@@ -64,8 +64,11 @@ cs | admin/admin |	CyberSense  | Optional deep forensic 
 # systems in detail  
 ## lauchpad  
 has the function to be the initial place for accessing the 0499 lab environment. it runs the AD controller role for "demo.local". 
-it runs an **DHCP** and **DNS** server, the DHCP server updates all hostnames from any linux/windows to the DNS server. means if you deploy a linux or windows vm that hostname will listed and updated in the DNS server automatically. result is a pretty good name reolution in your lab.
-any manual configured IP have to to manual maintained in the DNS server.
+it runs an **DHCP** and **DNS** server, the DHCP server updates all hostnames from any linux/windows to the DNS server. means if you deploy a linux or windows vm that hostname will listed and updated in the DNS server automatically, result is a working name reolution in your lab.
+any manual configured IP have to to manual maintained in the DNS server.  
+XCA tool on launchpad is for generating own SSL certificates. rootCA for democenter is alreday pushed via GPO. so every windows machine that is member of demo.local AD trust your self created SSL certificates. on linux boxes you have to this manually depended on the used distribution.  
+
+
 ### mremoteNG
 contains pre-configured SSH and RDP sessions for almost all workloads and systems
 ### browser
