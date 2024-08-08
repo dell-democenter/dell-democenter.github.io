@@ -39,6 +39,8 @@ hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA 
 openshift  |		kubeadmin  |		openshift cluster  |	 	Kubernetes from IBM 
 powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD
 powerstore  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD
+scvmm  |		administrator@demo.local  |		system center virtual machine manager  |		old stlye UI fpr central managing vm´s
+wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  
 
 
 nve-1  |		administrator  |		Networker  |	legay dataprotection 	
@@ -117,6 +119,10 @@ fresh deployed, joinded the demo.local domain. has some file in the \\powerscale
 
 ## nas 
 is running rocky linux and doing the NFS datstore jov for the esxi cluster.
+
+## scvmm (system center virtual machine manager)
+the old style way to manage vm´s
+can be pimped with our networker plugin ;-)
 
 ## wac (windows admin center)
 the "option" to have a nice HTML5 UI for managing windows systems.
