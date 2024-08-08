@@ -68,7 +68,8 @@ it runs an **DHCP** and **DNS** server, the DHCP server updates all hostnames fr
 any manual configured IP have to to manual maintained in the DNS server.  
 
 ### XCA tool
-is for generating your own SSL certificates. rootCA for democenter is alreday pushed via GPO. so every windows machine that is member of demo.local AD trust your self created SSL certificates. on linux boxes you have to this manually depended on the used distribution.  
+is for generating your own SSL certificates. rootCA for democenter is alreday pushed via GPO. so every windows machine that is member of demo.local AD trust your self created SSL certificates. on linux boxes you have to this manually depended on the used distribution. 
+how to use XCA: https://hohnstaedt.de/xca/  
 
 ### mremoteNG
 contains pre-configured SSH and RDP sessions for almost all workloads and systems
