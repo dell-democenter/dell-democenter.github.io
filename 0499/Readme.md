@@ -9,8 +9,8 @@
 ![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/c6c7933c-7002-4862-805c-c745375c549d)
 
 # FQDN and DNS suffix  
-***.demo.local** is the usual DNS suffix
-as rule of thumb: use ALWAYS FQDN !!!
+***.demo.local** is the usual DNS suffix   
+naming policy is: use ALWAYS FQDN !!!
 
 # account and passwords  
 Username depends, as always, on the workload or the device you want to login or manage   
