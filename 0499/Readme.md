@@ -160,6 +160,19 @@ sudo /usr/local/dpc/bin/dpc status
 ```
 - wait 1-2 minutes and try to login in UI again
 
+## CR login in UI not possible (SOLUTION)
+- ssh into CR via mremoteNG
+```bash
+sudo /opt/dellemc/cr/bin/crsetup.sh --verifypassword
+```
+- use always the default lab Password123!
+- regenerate the expired ertificates
+```bash
+sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
+```
+- wait 1-2 minutes and try to login in UI again
+
+
 ## vm's did not get DHCP ip adress
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
