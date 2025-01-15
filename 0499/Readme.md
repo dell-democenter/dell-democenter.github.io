@@ -6,7 +6,7 @@
 
 # lab overview
 ### systems / workloads / connectivity 
-![image](https://github.com/dell-democenter/dell-democenter.github.io/assets/37048842/c6c7933c-7002-4862-805c-c745375c549d)
+![image](https://github.com/user-attachments/assets/0d7ba2e0-b649-40e3-b5c6-5be92d0794e6)
 
 # FQDN and DNS suffix  
 ***.demo.local** is the usual DNS suffix   
