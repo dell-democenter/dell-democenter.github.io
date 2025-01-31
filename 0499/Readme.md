@@ -21,6 +21,7 @@ FDQN | account/password | workload  |  notes
 ------|---------------------|------------|-----------  
 vault-ppdm | root/changeme | ppdm in the vault | OS level
 vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
+nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 
 # workloads
 FDQN | account | workload  |  notes  
