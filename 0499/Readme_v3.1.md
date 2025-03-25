@@ -1,4 +1,5 @@
 ># **FOR ACTUAL ISSUES SEE BELOW [actual issues](./#actual-issues)**
+># **0499 v3.1 [release notes](./#release-notes)**
 
 # what is HOL-0499 v3.1 ?  
 ### goal is to have a playground that represents a “realistic” customer environment with several workloads.
@@ -19,46 +20,46 @@ Rule of thumb for password is always: **Password123!**
 Exceptions listed here: 
 FDQN | account/password | workload  |  notes  
 ------|---------------------|------------|-----------  
-vault-ppdm | root/changeme | ppdm in the vault | OS level
+vault-ppdm | root/changeme | ppdm in the vault | OS level
 vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
 nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 
 # workloads
 FDQN | account | workload  |  notes  
 ------|---------------------|------------|-----------  
-vcenter01 | admin@vsphere.local | vsphere | The production vcenter 
-esxi01+02+03 | root | esxi | The production hypervisors
-nas | admin | NFS Datastore for vsphere | rocky linux and zfs
-launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver 
-ansible | admin | RestAPI automation | filled with automation magic from karsten 
-ddve-01 | sysadmin | PP DataDomain | primary protection target 
-ddve-02 | sysadmin | PP DataDomain | secondary protection target 
-sql01+02 | administrator@demo.local | SQL 2019 AAG  |	treated as bare-metal SQL DB 
-ddmc |	sysadmin | ddmc | smart scale “bash hack” used 
-dpa |	administrator  | DPA 	
-dpc |	administrator@dpc.local  | DPC 	
-exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system 
-file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server 
-hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA  
-openshift0+1+2  |		kubeadmin  |		openshift cluster  |	 	Kubernetes from RedHat  
-powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  
-powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  
-scvmm  |		administrator@demo.local  |		system center virtual machine manager  |		old stlye UI fpr central managing vm´s  
-wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  
-nve-1  |		administrator  |		Networker  |	legay dataprotection 	
-nve-1-vproxy  |		admin  |		vproxy 	
-ora1  |		root or oracle | Oracle 19c  |	DG active |		Data guard node 
-ora2  |		root or oracle | Oracle 19c  |	DG standby |	Data guard node 
-ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI
-ppdm-1-search | NA | PPDM search node 	
-ppdm-1-report | NA | PPDM report node 	
-sql03+04 | administrator@demo.local | SQL 2022 AAG | treated as vm for app ware backup 
-vault-esxi | root | esxi | for simulating a CR vault area  
-vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault  
-vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen”  
-vault-ddve | sysadmin | PPDD for the vault | the separated protection target  
-cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager 
-cs | admin |	CyberSense  | Optional deep forensic  
+vcenter01 | admin@vsphere.local | vsphere | The production vcenter 
+esxi01+02+03 | root | esxi | The production hypervisors
+nas | admin | NFS Datastore for vsphere | rocky linux and zfs
+launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver 
+ansible | admin | RestAPI automation | filled with automation magic from karsten 
+ddve-01 | sysadmin | PP DataDomain | primary protection target 
+ddve-02 | sysadmin | PP DataDomain | secondary protection target 
+sql01+02 | administrator@demo.local | SQL 2019 AAG  |	treated as bare-metal SQL DB 
+ddmc |	sysadmin | ddmc | smart scale “bash hack” used 
+dpa |	administrator  | DPA 	
+dpc |	administrator@dpc.local  | DPC 	
+exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system 
+file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server 
+hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA  
+openshift0+1+2  |		kubeadmin  |		openshift cluster  |	 	Kubernetes from RedHat  
+powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  
+powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  
+scvmm  |		administrator@demo.local  |		system center virtual machine manager  |		old stlye UI fpr central managing vm´s  
+wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  
+nve-1  |		administrator  |		Networker  |	legay dataprotection 	
+nve-1-vproxy  |		admin  |		vproxy 	
+ora1  |		root or oracle | Oracle 19c  |	DG active |		Data guard node 
+ora2  |		root or oracle | Oracle 19c  |	DG standby |	Data guard node 
+ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI
+ppdm-1-search | NA | PPDM search node 	
+ppdm-1-report | NA | PPDM report node 	
+sql03+04 | administrator@demo.local | SQL 2022 AAG | treated as vm for app ware backup 
+vault-esxi | root | esxi | for simulating a CR vault area  
+vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault  
+vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen”  
+vault-ddve | sysadmin | PPDD for the vault | the separated protection target  
+cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager 
+cs | admin |	CyberSense  | Optional deep forensic  
 
 
 # systems in detail  
@@ -177,6 +178,18 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
 
+# release notes
+## new
+- mariadDB
+- PostgreSQL
+- mongoDB
+- rocky 8 and 9 templates
+- ontap simulator 2 node cluster
+ 	
+## changed
+- moved all hyper-vm´s from SMB into CSV datastore
+- moved all vm´s in vault-esxi from local datastore iunto nfs-datastore
 
-
+## removed
+-  
 
