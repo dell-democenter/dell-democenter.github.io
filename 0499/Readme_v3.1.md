@@ -51,7 +51,7 @@ nve-1-vproxy  |		admin  |		vproxy
 ora1  |		root or oracle | Oracle 19c  |	DataGuard active |	use DataStudio Client to access DB with UI
 ora2  |		root or oracle | Oracle 19c  |	DataGuard standby |	use DataStudio Client to access DB with UI
 db2 | root or db2inst1 | IBM DB2 |use DataStudio Client to access DB with UI
-my-sql01 root | mysql | use DbGate to access DB with UI
+my-sql01 | root | mysql | use DbGate to access DB with UI
 mariadb-1 | root | mariaDB | use DbGate to access DB with UI
 postgres-1 | root | PostgreSQL | use DbGate to access DB with UI
 mongodc-1 | root | mongoDB |  use DbGate to access DB with UI
