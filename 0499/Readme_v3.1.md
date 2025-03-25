@@ -11,7 +11,7 @@
 ### Note on VLAN2
 VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
 esxi servers already have kernel interfaces. ppdm is already using it for DR backup. powerstore has already connect with data interfaces.  
-connect your systems, like ddve, to VLAN if traffic "separation" is wanted ;-)
+connect your systems, like your ddve, to VLAN2 if traffic "separation" is wanted ;-)
 
 # FQDN and DNS suffix  
 ***.demo.local** is the usual DNS suffix   
@@ -84,13 +84,21 @@ how to use XCA: https://hohnstaedt.de/xca/
 
 ### mremoteNG
 contains pre-configured SSH and RDP sessions for almost all workloads and systems
+
 ### browser
-firefox "should" be used as default browser. it´s feature to pre-fill user and password fields makes it really easy and fast to access the UI of all systems. edge **MUST** be used for windows admin center.
+MS EDGE is default browser. Firefox ist installed but not everywhere supported, so just for doublechecking for UI "issues". 
+
+### DbGate
+really nice tool for accessing/editing/modifying databases like mariaDB / mySQL / PostgreSQL / MongoDB with a easy to use UI interface.
+all DBs entry already provided
+
 ### Data Studio Client (IBM)
 nice java UI for accessing the DB2 single node instance and the oracle dataguard cluster.
 for those how wants to see that the a DB is alive/mounted and able to create entrys.
+
 ### SAP HANA Studio
 nice java UI for accessing the HANA HXE single node instance.
+
 ###WinSCP 
 well known tool for transferring files to linux systems.
 
@@ -98,11 +106,10 @@ well known tool for transferring files to linux systems.
 use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcom. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
 
 ## ansible
-a linux host preconfigured to run automation with ansible playbooks.
-
+a linux host preconfigured to run automation magic with ansible playbooks.
 
 ## mail /exchange1 / exchange2
-this exchange dag let you reiceive and send email just internally. it not (yet) relaying any SMTP mails.
+this exchange dag let you receive and send email just internally. it not (yet) relaying any SMTP mails.
 the name of IP less DAG is "mail.demo.local" residing on two nodes "exchange1" and "exchange2"
 some system are already configured to send email like ASUPś and so on. try to configure it for your workload.
 
@@ -128,6 +135,12 @@ fresh deployed, nothing configured
 fresh deployed, nothing configured
 intend to be used when demonstrating synergy between dell primary storage <> backup storage, orchestrated by PowerProtect
 
+## ontap simulator
+ontap 2 node cluster with no shared backend (simulator limit)  
+managing with virtual cluster name ontap-cluster.demo.local or IP 192.168.1.70  
+some storage virtual machine for CIFS / NFS /iSCSI are already prepared  
+try some DNAS backup with ppdm or import external ontap storage with powerstore
+
 ## powerscale
 fresh deployed, joinded the demo.local domain. has some file in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
 
@@ -135,7 +148,7 @@ fresh deployed, joinded the demo.local domain. has some file in the \\powerscale
 3 node openshuft cluster. running mysql and wordpress workload. intend to be used for demontrating the K8s workload in PPDM
 
 ## nas 
-is running rocky linux and doing the NFS datstore jov for the esxi cluster.
+is running rocky linux and doing the NFS datstore job for the esxi servers.
 
 ## scvmm (system center virtual machine manager)
 the old style way to manage vm´s
