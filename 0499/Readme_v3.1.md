@@ -8,6 +8,10 @@
 # lab overview
 ### systems / workloads / connectivity 
 ![image](https://github.com/user-attachments/assets/b861b4ed-f9c8-4af0-9906-d8a6d83edfd0)
+### Note on VLAN2
+VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
+esxi servers already have kernel interfaces. ppdm is already using it for DR backup. powerstore has already connect with data interfaces.  
+connect your systems, like ddve, to VLAN if traffic "separation" is wanted ;-)
 
 # FQDN and DNS suffix  
 ***.demo.local** is the usual DNS suffix   
