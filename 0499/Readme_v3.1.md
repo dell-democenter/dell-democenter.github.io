@@ -7,7 +7,7 @@
 
 # lab overview
 ### systems / workloads / connectivity 
-![image](https://github.com/user-attachments/assets/f75558d2-88f3-4ca2-902e-6e43629a099c)
+![image](https://github.com/user-attachments/assets/b861b4ed-f9c8-4af0-9906-d8a6d83edfd0)
 
 # FQDN and DNS suffix  
 ***.demo.local** is the usual DNS suffix   
