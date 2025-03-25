@@ -1,5 +1,5 @@
 ># **FOR ACTUAL ISSUES SEE BELOW [actual issues](./#actual-issues)**
-># **0499 v3.1 [release notes](./#release-notes)**
+># **0499 v3.1 [release notes](#./release-notes)**
 
 # what is HOL-0499 v3.1 ?  
 ### goal is to have a playground that represents a “realistic” customer environment with several workloads.
