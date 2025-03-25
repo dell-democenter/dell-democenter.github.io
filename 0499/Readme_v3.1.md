@@ -34,7 +34,7 @@ launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo
 ansible | admin | RestAPI automation | filled with automation magic from karsten 
 ddve-01 | sysadmin | PP DataDomain | primary protection target 
 ddve-02 | sysadmin | PP DataDomain | secondary protection target 
-sql01+02 | administrator@demo.local | SQL 2019 AAG  |	treated as bare-metal SQL DB 
+sql01+02 | administrator@demo.local | SQL 2019 AAG  |	running on hyper-v 
 ddmc |	sysadmin | ddmc | smart scale “bash hack” used 
 dpa |	administrator  | DPA 	
 dpc |	administrator@dpc.local  | DPC 	
@@ -58,7 +58,7 @@ mongodc-1 | root | mongoDB |  use DbGate to access DB with UI
 ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI
 ppdm-1-search | NA | PPDM search node 	
 ppdm-1-report | NA | PPDM report node 	
-sql03+04 | administrator@demo.local | SQL 2022 AAG | treated as vm for app ware backup
+sql03+04 | administrator@demo.local | SQL 2022 AAG | running on vmware
 ***| *** | *** | ***  
 vault-esxi | root | esxi | for simulating a CR vault area  
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault  
@@ -190,11 +190,13 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 - PostgreSQL
 - mongoDB
 - rocky 8 and 9 templates
-- ontap simulator 2 node cluster
+- ontap 9.15 simulator 2 node cluster
  	
 ## changed
-- moved all hyper-vm´s from SMB into CSV datastore
-- moved all vm´s in vault-esxi from local datastore iunto nfs-datastore
+- moved all hyper-vm´s from SMB on CSV datastore
+- moved all vault-esxi vm´s from local datastore on nfs-datastore
+- updated NW / DPC / DDMC / DPA
+- updated Windows Admin Center
 
 ## removed
 -  
