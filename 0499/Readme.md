@@ -1,8 +1,8 @@
 ># **FOR ACTUAL ISSUES SEE BELOW [actual issues](./#actual-issues)**
 
 # what is HOL-0499 ?  
-### goal is to have a playground that represents a “realistic” customer environment with several workloads.
-### goal is to install and configure all DELL solution from scratch to gain experience on your own !
+### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
+### on this playground we give the chance to install and configure Dell Technolgies products from scratch on your own to gain experience !
 
 # lab overview
 ### systems / workloads / connectivity 
