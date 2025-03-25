@@ -48,12 +48,18 @@ scvmm  |		administrator@demo.local  |		system center virtual machine manager  |	
 wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  
 nve-1  |		administrator  |		Networker  |	legay dataprotection 	
 nve-1-vproxy  |		admin  |		vproxy 	
-ora1  |		root or oracle | Oracle 19c  |	DG active |		Data guard node 
-ora2  |		root or oracle | Oracle 19c  |	DG standby |	Data guard node 
+ora1  |		root or oracle | Oracle 19c  |	DataGuard active |	use DataStudio Client to access DB with UI
+ora2  |		root or oracle | Oracle 19c  |	DataGuard standby |	use DataStudio Client to access DB with UI
+db2 | root or db2inst1 | IBM DB2 |use DataStudio Client to access DB with UI
+my-sql01 root | mysql | use DbGate to access DB with UI
+mariadb-1 | root | mariaDB | use DbGate to access DB with UI
+postgres-1 | root | PostgreSQL | use DbGate to access DB with UI
+mongodc-1 | root | mongoDB |  use DbGate to access DB with UI
 ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI
 ppdm-1-search | NA | PPDM search node 	
 ppdm-1-report | NA | PPDM report node 	
-sql03+04 | administrator@demo.local | SQL 2022 AAG | treated as vm for app ware backup 
+sql03+04 | administrator@demo.local | SQL 2022 AAG | treated as vm for app ware backup
+***| *** | *** | ***  
 vault-esxi | root | esxi | for simulating a CR vault area  
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault  
 vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen”  
