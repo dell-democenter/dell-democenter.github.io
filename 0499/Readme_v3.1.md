@@ -1,4 +1,4 @@
-># **FOR ACTUAL ISSUES SEE BELOW [actual issues](./#actual-issues)**
+># **FOR ACTUAL ISSUES SEE BELOW [actual issues](#actual-issues)**
 ># **0499 v3.1 [release notes](#release-notes)**
 
 # what is HOL-0499 v3.1 ?  
