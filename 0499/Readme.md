@@ -172,7 +172,11 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 ```
 - wait 1-2 minutes and try to login in UI again
 
-
+## WAC vm is not running
+- open the failover cluster manager and navigate to hv-cluster > roles 
+- right click "SCVMM wac resources" navigate to "more actions" > "delete saved state"
+- delete the save state and start the wac vm
+  
 ## vm's did not get DHCP ip adress
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
