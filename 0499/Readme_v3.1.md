@@ -130,8 +130,8 @@ fresh deployed, nothing configured
 ## DPC
 fresh deployed, nothing configured
 
-## powerstore
-fresh deployed, nothing configured
+## powerstore´s
+fresh deployed, initial network cinfiguration done. both systems are connected for replication and metro. 
 intend to be used when demonstrating synergy between dell primary storage <> backup storage, orchestrated by PowerProtect
 
 ## ontap simulator
@@ -141,13 +141,13 @@ some storage virtual machine for CIFS / NFS /iSCSI are already prepared
 try some DNAS backup with ppdm or import external ontap storage with powerstore
 
 ## powerscale
-fresh deployed, joinded the demo.local domain. has some file in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
+fresh deployed, joinded the ADS demo.local domain. has some file in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
 
 ## openshift
 3 node openshuft cluster. running mysql and wordpress workload. intend to be used for demontrating the K8s workload in PPDM
 
 ## nas 
-is running rocky linux and doing the NFS datstore job for the esxi servers.
+is running rocky linux and doing the NFS datstore job for the esxi servers. DONT TOUCH ;-)  
 
 ## scvmm (system center virtual machine manager)
 the old style way to manage vm´s
@@ -162,7 +162,7 @@ the "option" to have a nice HTML5 UI for managing windows systems.
 ## openshift cluster not starting (SOLUTION)  
 - start ansible vm
 - login via ssh as admin into ansible vm
-- export k8s envvironment and get new certificates
+- export k8s envvironment and regenerate certificates
   
 ```bash
 export KUBECONFIG=~/workspace/openshift/auth/kubeconfig
@@ -189,7 +189,7 @@ sudo /usr/local/dpc/bin/dpc status
 sudo /opt/dellemc/cr/bin/crsetup.sh --verifypassword
 ```
 - use always the default lab Password123!
-- regenerate the expired ertificates
+- regenerate the expired certificates
 ```bash
 sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 ```
