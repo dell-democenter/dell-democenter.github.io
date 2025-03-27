@@ -205,15 +205,19 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 - mariadDB
 - PostgreSQL
 - mongoDB
+- DbGate offer nice UI for DB´s
 - rocky 8 and 9 templates
 - ontap 9.15 simulator 2 node cluster
  	
 ## changed
-- moved all hyper-vm´s from SMB on CSV datastore
-- moved all vault-esxi vm´s from local datastore on nfs-datastore
-- updated NW / DPC / DDMC / DPA
-- updated Windows Admin Center
+- moved all hyper-vm´s from SMB to CSV datastore
+- moved all vault-esxi vm´s from local datastore to nfs-datastore
+- updated NW / DPC / DDMC / DPA / PPDM / CR / CS to latest version (march 2025) 
+- updated Windows Admin Center  
+- updated launchpad to windows 2025  
+- updated hyper-v nodes to windows 2025  
 
 ## removed
--  
-
+-  Rancher  
+-  vault-esxi local datastore
+  
