@@ -206,8 +206,10 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 - PostgreSQL
 - mongoDB
 - DbGate offer nice UI for DB´s
-- rocky 8 and 9 templates
-- ontap 9.15 simulator 2 node cluster
+- rocky 9 / centos 9 / SLES15 / win2025 templates  
+- ontap 9.15 simulator 2 node cluster  
+- openshift virtualization  
+- openshift ansible automation platform  
  	
 ## changed
 - moved all hyper-vm´s from SMB to CSV datastore
