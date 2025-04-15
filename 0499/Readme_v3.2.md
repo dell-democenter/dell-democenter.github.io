@@ -202,6 +202,8 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 
 # release notes
 ## new
+- Nutanix AHV one node cluster
+- Hycu R-Cloud
 - mariadDB
 - PostgreSQL
 - mongoDB
