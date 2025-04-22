@@ -195,9 +195,9 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 ```
 - wait 1-2 minutes and try to login in UI again
 
-## onzap cluster not starting (SOLUTION)  
--  due to not graceful shutdown node shows **"Internal error: Cannot open corrupt replicated database."**  
-- ssh into **BOTH** ontap nodes via mremoteNG
+## ontap cluster not starting (SOLUTION)  
+-  due to not graceful shutdown node shows __"Internal error: Cannot open corrupt replicated database."__  
+- ssh into ***BOTH*** ontap nodes via mremoteNG
 ```bash
 set diag
 ```
