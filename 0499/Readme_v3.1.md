@@ -206,7 +206,9 @@ answer with "Y"
 system configuration recovery node mroot-state clear -recovery-state all 
 ```
 answer with "Y"  
-wait ~ 30 - 40 seconds and try again access to ontap-cluster web UI   
+wait 60 seconds and try again access to ontap-cluster web UI
+if not accessible after 60 seconds do a gracefull reboot via vcenter webui of ***BOTH*** nodes  
+
 
 ## vm's did not get DHCP ip adress
 - networking issue in the underlying democenter infrastructure.
