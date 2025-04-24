@@ -199,6 +199,20 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 ```
 - wait 1-2 minutes and try to login in UI again
 
+## ontap cluster not starting (SOLUTION)  
+-  due to not graceful shutdown node shows __"Internal error: Cannot open corrupt replicated database."__  
+- ssh into ***BOTH*** ontap nodes via mremoteNG
+```bash
+set diag
+```
+answer with "Y"  
+```bash
+system configuration recovery node mroot-state clear -recovery-state all 
+```
+answer with "Y"  
+wait 60 seconds and try again access to ontap-cluster web UI
+if web UI still not accessible after 60 seconds do a "restart guest OS" via vcenter webui of ***BOTH*** nodes  
+
 
 ## vm's did not get DHCP ip adress
 - networking issue in the underlying democenter infrastructure.
