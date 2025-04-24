@@ -6,7 +6,8 @@
 
 # lab overview
 ### systems / workloads / connectivity 
-![image](https://github.com/user-attachments/assets/b861b4ed-f9c8-4af0-9906-d8a6d83edfd0)
+![image](https://github.com/user-attachments/assets/c5a5c667-bb46-41ff-bc52-a1032c16fb20)
+
 ### Note on VLAN2
 VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
 esxi servers already have kernel interfaces. ppdm is already using it for DR backup. powerstore has already connect with data interfaces.  
@@ -31,7 +32,10 @@ nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 FDQN | account | workload  |  notes  
 ------|---------------------|------------|-----------  
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter 
-esxi01+02+03 | root | esxi | The production hypervisors
+esxi01+02+03 | root | esxi | The production hypervisors  
+nutanixcluster1 | admin | prism | Nutanix WebUI  
+ntnx-node1 | admin | AHV node | the "physical" hypervisor
+ntnx-node1-cvm | admin | nutanix CVM | controller vm
 nas | admin | NFS Datastore for vsphere | rocky linux and zfs
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver 
 ansible | admin | RestAPI automation | filled with automation magic from karsten 
