@@ -175,6 +175,10 @@ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{
 ```
 - wait for at least 5 minutes
 - if openshift cluster is still not starting - repeat the CLI commands
+## ansible automation platform need password changed for AWX Admin Credentials for automatic update Jobs
+from AAP --> credentials --> AWX Admin Credentials enter Password123! as the new Password
+
+![image](https://github.com/user-attachments/assets/f3641a6b-7e8f-42a8-b495-25e7e1f7ed94)
 
 ## DPC login in UI not possible (SOLUTION)
 - ssh into DPC via mremoteNG
