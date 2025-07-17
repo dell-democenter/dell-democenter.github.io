@@ -1,4 +1,4 @@
-># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes) 0499 v3.2**
+># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes) 0499 v3.3**
 
 # what is HOL-0499 ?  
 ### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
