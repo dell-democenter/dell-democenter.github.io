@@ -40,7 +40,7 @@ nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to 
 proxmox1 | root | proxmox web UI | promox  | democenter level
 pbs | root | proxmox backup server | PBS | democenter level
 nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
-launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver | | democenter level
+launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNS | | democenter level
 ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
 ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level
 ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level
