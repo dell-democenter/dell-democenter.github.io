@@ -2,11 +2,11 @@
 
 # what is HOL-0499 ?  
 ### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
-### on this playground we give you the chance to install and configure Dell Technolgies products from scratch on your own to gain experience !
+### on this playground we give you the chance to install and configure Dell Technologies products from scratch on your own to gain experience !
 
 # lab overview
 ### systems / workloads / connectivity 
-<img width="1575" height="872" alt="image" src="https://github.com/user-attachments/assets/dc8b947d-f162-4063-a519-7f960e3d51a2" />
+<img width="1568" height="873" alt="image" src="https://github.com/user-attachments/assets/a5e39b4a-70fd-498f-b537-baba73d03ddc" />
 
 ### Note on VLAN2
 VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
