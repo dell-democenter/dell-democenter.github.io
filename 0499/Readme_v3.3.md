@@ -35,7 +35,10 @@ vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter 
 esxi01+02 | root | esxi | broadcomm hypervisors | democenter level
 ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter level
 ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix
-ntnx-prismcentral | admin | nutaniox prismcentral | like a vcenter | nutanix
+ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix
+nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to nutanix | nutanix
+proxmox1 | root | proxmox web UI | promox  | democenter level
+pbs | root | proxmox backup server | PBS | democenter level
 nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver | | democenter level
 ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
@@ -163,17 +166,18 @@ the "option" to have a nice HTML5 UI for managing windows systems.
 **MUST** be accessed by edge, it's not working with firefox
 
 ## nutanix 
-is a single node nutanix "cluster". it´s based of the node (AHV) itself running a control vm (CVM). limited reources avalaible...
+is a single node nutanix "cluster". running nutanix´s hypervisor aka. AHV. (some kind of KVM).   
+every nutanix node runs a control vm (CVM) that controls the underlying node. limited reources avalaible...
 
 ## prismcentral 
-some kind of manager of managers aka. vcenter. it can control multiple nutanix clusters.  
+some kind of "manager of managers" aka. vcenter. prismcentral aka. PC can control multiple nutanix clusters.  
 
 ## proxmox 
 is a single node proxmox cluster. can run KVM vm´s and linux containers. for demoing what proxmox is and most important whts it´s NOT.   
 pbs ande backup schedule is already configured and onboarded.
 
 ## pbs
-proxmox backup server aka. PBS. a vm that is specifix designes to protecte proxmox environments. it´s doing ceompression and dedupe.
+proxmox backup server aka. PBS. a product that is specific designed to protect proxmox environments. it´s doing ceompression and dedupe, always.
 
 
 # actual issues 
