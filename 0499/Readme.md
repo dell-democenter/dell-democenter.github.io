@@ -6,6 +6,8 @@
 
 # lab overview
 ### systems / workloads / connectivity 
+<img width="1555" height="865" alt="image" src="https://github.com/user-attachments/assets/fa3a26a8-6a31-4d1f-b9d5-323dbc8b1ea9" />
+
 ![image](https://github.com/user-attachments/assets/f75558d2-88f3-4ca2-902e-6e43629a099c)
 
 # FQDN and DNS suffix  
