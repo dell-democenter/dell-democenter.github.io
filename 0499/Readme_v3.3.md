@@ -32,9 +32,10 @@ nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 FDQN | account | workload  |  notes  | runs on
 ------|---------------------|------------|-----------|-------------  
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level
-esxi01+02+03 | root | esxi | The production hypervisors | democenter level
+esxi01+02 | root | esxi | broadcomm hypervisors | democenter level
 ntnx-node | root | Nutanix WebUI  | democenter level
 ntnx-node-cvm | nutanix | nutanix CVM | | nutanix
+ntnx-prismcentral | admin | nutaniox prismcentral | like a vcenter | nutanix
 nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver | democenter level
 ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
