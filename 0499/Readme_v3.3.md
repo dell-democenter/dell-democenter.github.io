@@ -42,13 +42,13 @@ ansible | admin | ansible jumphost for ansbile CLI automation | filled with wond
 ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level
 ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level
 sql01+02 | administrator@demo.local | SQL 2019 AAG  |	running on hyper-v 
-ddmc |	sysadmin | ddmc | smart scale “bash hack” used 
-dpa |	administrator  | DPA | runs on nutanix 	
-dpc |	administrator@dpc.local  | DPC 	| runs on nutanix
-exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system 
-file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server 
-hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA  
-openshift0+1+2  |		kubeadmin  |		openshift cluster  |	 	Kubernetes from RedHat  
+ddmc |	sysadmin | ddmc | NO smart scale included anymore ! | nutanix 
+dpa |	administrator  | DPA discontinued | nutanix 	
+dpc |	administrator@dpc.local  | DPC discontinued	| nutanix
+exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system | vmware
+file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server | vmware
+hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA  | vmware 
+ocpnode0+1+2  |		kubeadmin  |		openshift cluster  | Kubernetes + virtualization from RedHat |  democenter level
 powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  
 powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  
 scvmm  |		administrator@demo.local  |		system center virtual machine manager  |		old stlye UI fpr central managing vm´s  
