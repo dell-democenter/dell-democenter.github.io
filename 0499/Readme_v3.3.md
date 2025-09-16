@@ -65,15 +65,15 @@ mongodc-1 | root | mongoDB |  use DbGate to access DB with UI| vmware
 ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI | vmware
 ppdm-1-search | NA | PPDM search node | | vmware
 ppdm-1-report | NA | PPDM report node | | vmware
-sql03+04 | administrator@demo.local | SQL 2022 AAG |  vmware   
-msr | admin | multi sytems reporting | ppdm-1 already onboarded | runs on nutanix  
+sql03+04 | administrator@demo.local | SQL 2022 AAG | |  vmware   
+msr | admin | multi sytems reporting | ppdm-1 already onboarded | nutanix  
 ***| *** | *** | ***  
-vault-esxi | root | esxi | for simulating a CR vault area  
-vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault  
-vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen”  
-vault-ddve | sysadmin | PPDD for the vault | the separated protection target  
-cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager 
-cs | admin |	CyberSense  | Optional deep forensic  
+vault-esxi | root | esxi | for simulating a CR vault area  | demonceter level
+vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware  
+vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen” | vmware
+vault-ddve | sysadmin | PPDD for the vault | the separated protection target  | vmware
+cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager | vmware
+cs | admin |	CyberSense  | Optional deep forensic  | vmware 
 
 
 # systems in detail  
