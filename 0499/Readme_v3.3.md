@@ -34,7 +34,7 @@ FDQN | account | workload  |  notes  | runs on
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level
 esxi01+02 | root | esxi | broadcomm hypervisors | democenter level
 ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter level
-ntnx-node-cvm | nutanix | nutanix CVM | | nutanix
+ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix
 ntnx-prismcentral | admin | nutaniox prismcentral | like a vcenter | nutanix
 nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver | | democenter level
@@ -49,24 +49,24 @@ exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mai
 file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server | vmware
 hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA  | vmware 
 ocpnode0+1+2  |		kubeadmin  |		openshift cluster  | Kubernetes + virtualization from RedHat |  democenter level
-powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  
-powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  
-scvmm  |		administrator@demo.local  |		system center virtual machine manager  |		old stlye UI fpr central managing vm´s  
-wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  
-nve-1  |		administrator  |		Networker  |	legay dataprotection 	
-nve-1-vproxy  |		admin  |		vproxy 	
-ora1  |		root or oracle | Oracle 19c  |	DataGuard active |	use DataStudio Client to access DB with UI
-ora2  |		root or oracle | Oracle 19c  |	DataGuard standby |	use DataStudio Client to access DB with UI
-db2 | root or db2inst1 | IBM DB2 |use DataStudio Client to access DB with UI
-my-sql01 | root | mysql | use DbGate to access DB with UI
-mariadb-1 | root | mariaDB | use DbGate to access DB with UI
-postgres-1 | root | PostgreSQL | use DbGate to access DB with UI
-mongodc-1 | root | mongoDB |  use DbGate to access DB with UI
-ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI
-ppdm-1-search | NA | PPDM search node 	
-ppdm-1-report | NA | PPDM report node 	
-sql03+04 | administrator@demo.local | SQL 2022 AAG | running on vmware   
-msr | admin | multi sytems reporting | runs on nutanix  
+powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  | vmware
+powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  | vmware
+scvmm  |		administrator@demo.local  |		system center virtual machine manager  |	old stlye UI fpr central managing vm´s | hyper-v 
+wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  | hyper-v
+nve-1  |		administrator  |		Networker  |	legay dataprotection 	| vmware
+nve-1-vproxy  |		admin  |		vproxy 	| | vmware
+ora1  |		root or oracle | Oracle 19c  |	DataGuard active |	use DataStudio Client to access DB with UI | vmware
+ora2  |		root or oracle | Oracle 19c  |	DataGuard standby |	use DataStudio Client to access DB with UI | vmware
+db2 | root or db2inst1 | IBM DB2 |use DataStudio Client to access DB with UI | vmware
+my-sql01 | root | mysql | use DbGate to access DB with UI | vmware
+mariadb-1 | root | mariaDB | use DbGate to access DB with UI| vmware
+postgres-1 | root | PostgreSQL | use DbGate to access DB with UI| vmware
+mongodc-1 | root | mongoDB |  use DbGate to access DB with UI| vmware
+ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI | vmware
+ppdm-1-search | NA | PPDM search node | | vmware
+ppdm-1-report | NA | PPDM report node | | vmware
+sql03+04 | administrator@demo.local | SQL 2022 AAG |  vmware   
+msr | admin | multi sytems reporting | ppdm-1 already onboarded | runs on nutanix  
 ***| *** | *** | ***  
 vault-esxi | root | esxi | for simulating a CR vault area  
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault  
