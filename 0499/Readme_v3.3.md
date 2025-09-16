@@ -67,7 +67,7 @@ ppdm-1-search | NA | PPDM search node | | vmware
 ppdm-1-report | NA | PPDM report node | | vmware
 sql03+04 | administrator@demo.local | SQL 2022 AAG | |  vmware   
 msr | admin | multi sytems reporting | ppdm-1 already onboarded | nutanix  
-***| *** | *** | ***  
+***| *** | *** | *** | ***
 vault-esxi | root | esxi | for simulating a CR vault area  | demonceter level
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware  
 vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen” | vmware
@@ -149,7 +149,7 @@ try some DNAS backup with ppdm or import external ontap storage with powerstore
 fresh deployed, joinded the ADS demo.local domain. has some file in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
 
 ## openshift
-3 node openshuft cluster. running mysql and wordpress workload. intend to be used for demontrating the K8s workload in PPDM
+3 node openshift cluster with virtualization. intend to be used for demontrating the K8s and vm workload in PPDM
 
 ## nas 
 is running rocky linux and doing the NFS datstore job for the esxi servers. DONT TOUCH ;-)  
@@ -161,6 +161,19 @@ can be pimped with our networker plugin ;-)
 ## wac (windows admin center)
 the "option" to have a nice HTML5 UI for managing windows systems.
 **MUST** be accessed by edge, it's not working with firefox
+
+## nutanix 
+is a single node nutanix "cluster". it´s based of the node (AHV) itself running a control vm (CVM). limited reources avalaible...
+
+## prismcentral 
+some kind of manager of managers aka. vcenter. it can control multiple nutanix clusters.  
+
+## proxmox 
+is a single node proxmox cluster. can run KVM vm´s and linux containers. for demoing what proxmox is and most important whts it´s NOT.   
+pbs ande backup schedule is already configured and onboarded.
+
+## pbs
+proxmox backup server aka. PBS. a vm that is specifix designes to protecte proxmox environments. it´s doing ceompression and dedupe.
 
 
 # actual issues 
