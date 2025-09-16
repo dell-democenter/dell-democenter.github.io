@@ -33,14 +33,14 @@ FDQN | account | workload  |  notes  | runs on
 ------|---------------------|------------|-----------|-------------  
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level
 esxi01+02 | root | esxi | broadcomm hypervisors | democenter level
-ntnx-node | root | Nutanix WebUI  | democenter level
+ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter level
 ntnx-node-cvm | nutanix | nutanix CVM | | nutanix
 ntnx-prismcentral | admin | nutaniox prismcentral | like a vcenter | nutanix
 nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
-launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver | democenter level
+launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver | | democenter level
 ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
-ddve-01 | sysadmin | PP DataDomain | primary protection target 
-ddve-02 | sysadmin | PP DataDomain | secondary protection target 
+ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level
+ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level
 sql01+02 | administrator@demo.local | SQL 2019 AAG  |	running on hyper-v 
 ddmc |	sysadmin | ddmc | smart scale “bash hack” used 
 dpa |	administrator  | DPA | runs on nutanix 	
