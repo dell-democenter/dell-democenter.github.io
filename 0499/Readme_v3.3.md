@@ -6,7 +6,7 @@
 
 # lab overview
 ### systems / workloads / connectivity 
-![image](https://github.com/user-attachments/assets/c5a5c667-bb46-41ff-bc52-a1032c16fb20)
+<img width="1555" height="865" alt="image" src="https://github.com/user-attachments/assets/2250e2aa-191e-439e-8822-d0b88192ec13" />
 
 ### Note on VLAN2
 VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
