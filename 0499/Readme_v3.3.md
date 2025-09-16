@@ -29,22 +29,21 @@ vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
 nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 
 # workloads
-FDQN | account | workload  |  notes  
-------|---------------------|------------|-----------  
-vcenter01 | admin@vsphere.local | vsphere | The production vcenter 
-esxi01+02+03 | root | esxi | The production hypervisors  
-nutanixcluster1 | admin | prism | Nutanix WebUI  
-ntnx-node1 | admin | AHV node | the "physical" hypervisor
-ntnx-node1-cvm | admin | nutanix CVM | controller vm
-nas | admin | NFS Datastore for vsphere | rocky linux and zfs
-launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver 
-ansible | admin | RestAPI automation | filled with automation magic from karsten 
+FDQN | account | workload  |  notes  | runs on
+------|---------------------|------------|-----------|-------------  
+vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level
+esxi01+02+03 | root | esxi | The production hypervisors | democenter level
+ntnx-node | root | Nutanix WebUI  | democenter level
+ntnx-node-cvm | nutanix | nutanix CVM | | nutanix
+nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
+launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNSserver | democenter level
+ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
 ddve-01 | sysadmin | PP DataDomain | primary protection target 
 ddve-02 | sysadmin | PP DataDomain | secondary protection target 
 sql01+02 | administrator@demo.local | SQL 2019 AAG  |	running on hyper-v 
 ddmc |	sysadmin | ddmc | smart scale “bash hack” used 
-dpa |	administrator  | DPA 	
-dpc |	administrator@dpc.local  | DPC 	
+dpa |	administrator  | DPA | runs on nutanix 	
+dpc |	administrator@dpc.local  | DPC 	| runs on nutanix
 exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system 
 file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server 
 hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA  
@@ -65,7 +64,8 @@ mongodc-1 | root | mongoDB |  use DbGate to access DB with UI
 ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI
 ppdm-1-search | NA | PPDM search node 	
 ppdm-1-report | NA | PPDM report node 	
-sql03+04 | administrator@demo.local | SQL 2022 AAG | running on vmware
+sql03+04 | administrator@demo.local | SQL 2022 AAG | running on vmware   
+msr | admin | multi sytems reporting | runs on nutanix  
 ***| *** | *** | ***  
 vault-esxi | root | esxi | for simulating a CR vault area  
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault  
