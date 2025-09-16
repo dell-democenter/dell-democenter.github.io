@@ -37,8 +37,8 @@ ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter lev
 ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix
 ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix
 nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to nutanix | nutanix
-proxmox1 | root | proxmox web UI | promox  | democenter level
-pbs | root | proxmox backup server | PBS | democenter level
+proxmox1 | root | proxmox web UI | is doing KVM and LXC | democenter level
+pbs | root | proxmox backup server | is doing backup/restore | democenter level
 nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNS | | democenter level
 ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
