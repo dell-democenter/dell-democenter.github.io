@@ -41,10 +41,10 @@ launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo
 ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
 ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level
 ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level
-sql01+02 | administrator@demo.local | SQL 2019 AAG  |	running on hyper-v 
+sql01+02 | administrator@demo.local | SQL 2019 AAG  | |	running on hyper-v 
 ddmc |	sysadmin | ddmc | NO smart scale included anymore ! | nutanix 
-dpa |	administrator  | DPA discontinued | nutanix 	
-dpc |	administrator@dpc.local  | DPC discontinued	| nutanix
+dpa |	administrator  | DPA discontinued | | nutanix 	
+dpc |	administrator@dpc.local  | DPC discontinued	| | nutanix
 exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system | vmware
 file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server | vmware
 hana01  |		H01adm  |		hana hxe 2.0 SPS02  |	 	SAP HANA  | vmware 
@@ -55,8 +55,8 @@ scvmm  |		administrator@demo.local  |		system center virtual machine manager  |	
 wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  | hyper-v
 nve-1  |		administrator  |		Networker  |	legay dataprotection 	| vmware
 nve-1-vproxy  |		admin  |		vproxy 	| | vmware
-ora1  |		root or oracle | Oracle 19c  |	DataGuard active |	use DataStudio Client to access DB with UI | vmware
-ora2  |		root or oracle | Oracle 19c  |	DataGuard standby |	use DataStudio Client to access DB with UI | vmware
+ora1  |		root or oracle | Oracle 19c DataGuard active |	use DataStudio Client to access DB with UI | vmware
+ora2  |		root or oracle | Oracle 19c DataGuard standby |	use DataStudio Client to access DB with UI | vmware
 db2 | root or db2inst1 | IBM DB2 |use DataStudio Client to access DB with UI | vmware
 my-sql01 | root | mysql | use DbGate to access DB with UI | vmware
 mariadb-1 | root | mariaDB | use DbGate to access DB with UI| vmware
