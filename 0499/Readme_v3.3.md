@@ -258,11 +258,7 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - moved DDMC from vmware to nutanix
 
 ## removed
--  Rancher  
--  vault-esxi local datastore
-  
-
-
+-  esxi node3  
 
 
 
