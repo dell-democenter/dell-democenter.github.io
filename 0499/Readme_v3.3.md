@@ -240,9 +240,35 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
 
-# release notes
+
+
+# release notes 0499v3.2
 ## new
-- Nutanix AHV one node cluster
+- Nutanix Prismcentral aka. PC v7.3 runs now per default on nutanix cluster
+- MSR ist now pre-installed and runs on nutanix
+- proxmox PVE (promox virtual environment) v9.0 installed
+- promox PBS (promox backup server) v4.0 installed
+ 	
+## changed
+- Nutanix AHV updated to AOS 7.0 
+- Hycu R-Cloud updated to v5.2
+- nutanix move updated to 5.6.0
+- hycu updated to v5.2
+- moved DPA from vmware to nutanix
+- moved DDMC from vmware to nutanix
+
+## removed
+-  Rancher  
+-  vault-esxi local datastore
+  
+
+
+
+
+
+# release notes 0499v3.2
+## new
+- Nutanix AHV one node cluster with 
 - Hycu R-Cloud
 - mariadDB
 - PostgreSQL
