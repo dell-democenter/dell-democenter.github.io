@@ -1,4 +1,4 @@
-># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes) 0499 v3.3**
+># **click here for [actual issues](#actual-issues) | click here for [release notes 0499v3.3](#release-notes) 0499v3.3**
 
 # what is HOL-0499 ?  
 ### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
@@ -242,7 +242,7 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 
 
-# release notes 0499v3.2
+# release notes 0499v3.3
 ## new
 - Nutanix Prismcentral aka. PC v7.3 runs now per default on nutanix cluster
 - MSR ist now pre-installed and runs on nutanix
