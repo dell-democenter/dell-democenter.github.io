@@ -214,12 +214,12 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
  echo b >/proc/sysrq-trigger
 ```
 this will do a "hard reset" - wait 90 seconds and try to ping or get access to the nutanix CVM via mremoteNG  
-when the CVM is accessible via SSH it will take at least 5 min aka. 600 seconds to start all nutanix services completly  
+when the CVM is accessible via SSH it will take at least 5 min aka. 300 seconds to start all nutanix services completly  
 you can double check in a SSH session as user nutanix on the CVM with:
 ```bash
  cluster status
 ```
-it will take additional 10 minutes aka. 1200 secs to boot up primscentral vm.
+it will take additional 10 minutes aka. 600 secs to boot up primscentral vm.   
 be patient.....
 
 ## ontap cluster not starting (SOLUTION)  
