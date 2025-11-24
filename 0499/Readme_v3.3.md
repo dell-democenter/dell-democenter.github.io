@@ -182,7 +182,11 @@ proxmox backup server aka. PBS. a product that is specific designed to protect p
 
 # actual issues 
 ## openshift issues here (SOLUTION)  
-
+OADP Opwerator not deployed. 
+The OADP we use is Part of the 4.17 Catalog which is in a differnt catalogue source. Therefore we need to patch the source:  
+```bash
+oc patch subscription redhat-oadp-operator -n velero-ppdm --type=merge -p '{"spec":{"source": "redhat-operators-417"}}'
+```
 
 ## DPC login in UI not possible (SOLUTION)
 - ssh into DPC via mremoteNG
