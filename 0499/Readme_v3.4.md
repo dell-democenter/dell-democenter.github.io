@@ -1,4 +1,4 @@
-># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v33) 0499v3.4**
+># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v34) 0499v3.4**
 
 # what is HOL-0499 ?  
 ### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
@@ -6,7 +6,12 @@
 
 # lab overview
 ### systems / workloads / connectivity 
-<img width="1568" height="873" alt="image" src="https://github.com/user-attachments/assets/a5e39b4a-70fd-498f-b537-baba73d03ddc" />
+<img width="1569" height="865" alt="image" src="https://github.com/user-attachments/assets/04a50b19-9a9c-4183-923d-a53bd59860aa" />
+
+
+
+
+
 
 ### Note on VLAN2
 VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
