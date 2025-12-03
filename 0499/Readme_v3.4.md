@@ -187,7 +187,29 @@ proxmox backup server aka. PBS. a product that is specific designed to protect p
 
 # actual issues 
 ## openshift issues here (SOLUTION)  
-OADP Opwerator not deployed. 
+OADP Operator not deployed. 
+
+### Option 1, us new OADP version 5.1.3
+
+On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties. Insert:
+
+```bash
+k8s.oadp.version=5.1.3
+k8s.oadp.channel=stable
+```
+
+then restart cndm
+```
+restart cndm
+```
+
+Onboard /  Discover K8S , then patchaaprove the installplan
+
+```bash
+oc patch installplan $(oc get installplan -n velero-ppdm -o jsonpath='{.items[0].metadata.name}') -n velero-ppdm --type merge -p '{"spec":{"approved":true}}'
+```
+
+### Option 2
 The OADP we use is Part of the 4.17 Catalog which is in a differnt catalogue source. Therefore we need to patch the source, and then manually approve the Installplan ( Or Checlk UI to do it :-) )  
 ```bash
 oc patch subscription redhat-oadp-operator -n velero-ppdm --type=merge -p '{"spec":{"source": "redhat-operators-417"}}'
