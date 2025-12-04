@@ -50,8 +50,8 @@ ansible | admin | ansible jumphost for ansbile CLI automation | filled with wond
 ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level
 ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level
 sql01+02 | administrator@demo.local | SQL 2019 AAG  | |	running on hyper-v 
-ddmc |	sysadmin | ddmc | NO smart scale included anymore ! | nutanix 
-dpa |	administrator  | DPA discontinued | | nutanix 	
+ddmc |	sysadmin | ddmc | NO smart scale included anymore ! | proxmox 
+dpa |	administrator  | DPA discontinued | | proxmox 	
 dpc |	administrator@dpc.local  | DPC discontinued	| | nutanix
 exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system | vmware
 file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server | vmware
@@ -74,7 +74,7 @@ ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI | vmwar
 ppdm-1-search | NA | PPDM search node | | vmware
 ppdm-1-report | NA | PPDM report node | | vmware
 sql03+04 | administrator@demo.local | SQL 2022 AAG | |  vmware   
-msr | admin | multi sytems reporting | ppdm-1 already onboarded | nutanix  
+msr | admin | multi sytems reporting | ppdm-1 already onboarded | proxmox  
 ***| *** | *** | *** | ***
 vault-esxi | root | esxi | for simulating a CR vault area  | demonceter level
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware  
@@ -110,6 +110,10 @@ for those how wants to see that the a DB is alive/mounted and able to create ent
 
 ### SAP HANA Studio
 nice java UI for accessing the HANA HXE single node instance.
+
+### 2FAGuard
+nice TOTP tool for windows to scan your QR codes when activating 2FA for user of your choice
+dont use your own TOTP tzool on your mobile ;-)
 
 ###WinSCP 
 well known tool for transferring files to linux systems.
