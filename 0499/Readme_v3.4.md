@@ -204,7 +204,7 @@ k8s.oadp.channel=stable
 
 then restart cndm
 ```
-restart cndm
+cndm restart
 ```
 
 Onboard /  Discover K8S , then patchaaprove the installplan
