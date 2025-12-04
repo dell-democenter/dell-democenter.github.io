@@ -281,6 +281,26 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
 
+
+# release notes 0499v3.4
+## new
+- 2FAGuard tool for scan TOTP tokens
+ 	
+## changed
+- moved some workloads from nutanix to proxmox
+- Updated SRP stuff to latest releases
+
+## removed
+
+# release notes 0499v3.3
+## new
+- Nutanix Prismcentral aka. PC v7.3 runs now per default on nutanix cluster
+- MSR ist now pre-installed and runs on nutanix
+- proxmox PVE (promox virtual environment) v9.0 installed
+- proxmox PBS (promox backup server) v4.0 installed
+ 	
+
+
 # release notes 0499v3.3
 ## new
 - syslog server
