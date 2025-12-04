@@ -193,12 +193,12 @@ proxmox backup server aka. PBS. a product that is specific designed to protect p
 ## openshift issues here (SOLUTION)  
 OADP Operator not deployed. 
 
-### Option 1, use new OADP version 5.1.3
+### Option 1, use new OADP version 1.5.3
 
 On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties. Insert:
 
 ```bash
-k8s.oadp.version=5.1.3
+k8s.oadp.version=1.5.3
 k8s.oadp.channel=stable
 ```
 
