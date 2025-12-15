@@ -246,6 +246,13 @@ sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
 
 ## no webUI on nutanix or prismcentral - nutanix CVM not starting (SOLUTION)  
 - due to not graceful shutdown on nutanix AOS node the related CVM starts not sucesfully, so no ping or SSH into CVM possible
+## step #1 
+- ssh into ***ntnx-node-CVM***  via mremoteNG as user nutanix
+```bash
+ disk_operator mark_disks_usable /dev/sd?
+```
+this forces the CVM node to accept and reuse all existings disks  
+## step #2 
 - ssh into ***ntnx-node***  via mremoteNG as root
 ```bash
  echo b >/proc/sysrq-trigger
