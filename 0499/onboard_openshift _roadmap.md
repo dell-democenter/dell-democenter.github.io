@@ -1,34 +1,37 @@
 ### PPDM Kubernetes with OpenShift – Install Roadmap
 
-1. **Patch CNDM / controller properties for OADP**
+1. **Validate required OADP version from Install Guide and Patch CNDM if required**
 
-   * Update **CNDM / controller configuration** to use the required **OADP version (for example, OADP stable 1.5.3)** as documented for your PPDM release.
+   * Update **CNDM / controller configuration** to use the required **OADP version (for example, OADP stable 1.5.3)** as documented for your PPDM release
+| OCP Version    | OADP Version | OADP Channel |
+|----------------|--------------|--------------|
+| 4.14           | 1.3.0        | stable-1.3   |
+| 4.15–4.18*     | 1.4.3        | stable-1.4   |
+| 4.19           | 1.5.x        | stable       |
 
-2. **Apply PPDM RBAC resources**
+**Note:** OCP 4.15–4.18 is supported by default; no additional configuration is needed.
+
+2. **Apply PPDM RBAC resources and Create discovery service account  static token**
 
    * Download the latest **RBAC archive (`rbac.tar.gz`)** from the PPDM UI:  
      `Settings → Downloads → Kubernetes → RBAC`.
 
-   * Extract and apply the RBAC YAMLs (for example, `ppdm-controller-rbac.yaml` and `ppdm-discovery.yaml`) on the OpenShift cluster so the controller and discovery service accounts have the required permissions (including for InstallPlans / OADP).
+   * Extract and apply the RBAC YAMLs (for example, `ppdm-controller-rbac.yaml` and `ppdm-discovery.yaml`) on the OpenShift cluster so the controller and discovery service accounts have the required permissions (including for InstallPlans / OADP),  following the `README.txt` from the RBAC tarball.
 
-3. **Create discovery service account and static token**
+   * Create the **static token ** for the discovery service account  and use this token in the **Kubernetes Host Credentials** configuration in PPDM.
 
-   * Create the **discovery service account** (if not already created by the RBAC YAMLs) following the `README.txt` from the RBAC tarball.
-
-   * Create the **static token secret** for the discovery service account (as required by your Kubernetes/OpenShift version) and use this token in the **Kubernetes Host Credentials** configuration in PPDM.
-
-4. **Enable Kubernetes asset source in PPDM**
+3. **Enable Kubernetes asset source in PPDM**
 
    * In the PPDM UI, **enable the Kubernetes asset source**:  
      `Infrastructure → Asset Sources → Enable Source (Kubernetes)`.
 
-5. **Add OpenShift cluster as Kubernetes asset source**
+4. **Add OpenShift cluster as Kubernetes asset source**
 
    * Add the **OpenShift cluster** as a **Kubernetes asset source** (API server FQDN/IP, port 6443, token, root CA as needed).
 
    * Verify that discovery completes and that **OpenShift projects (namespaces)** appear as Kubernetes assets.
 
-6. **Onboard Kubernetes assets**
+5. **Onboard Kubernetes assets**
 
    * Validate the discovered **Kubernetes asset source** (OpenShift cluster) and confirm that required assets (namespaces and PVCs) are visible.
 
