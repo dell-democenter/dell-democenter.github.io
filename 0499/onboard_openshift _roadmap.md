@@ -12,7 +12,7 @@
    | 4.19        | 1.5.x        | stable       |
 
 **Note:** OCP 4.15–4.18 is supported by default; no additional configuration is needed.
-**Note:** OCP 4.15–4.18 is supported by default; no additional configuration is needed.
+
 
 2. **Apply PPDM RBAC resources and Create discovery service account  static token**
 
