@@ -198,19 +198,44 @@ OADP Operator not deployed.
 On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties. Insert:
 
 ```bash
+cat << EOF > /tmp/yourfilehere
 k8s.oadp.version=1.5.3
-k8s.oadp.channel=stable
-```
+k8s.oadp.channel=stable.
+EOF
 
-then restart cndm
-```
 cndm restart
 ```
 
+
 Onboard /  Discover K8S , then patchaaprove the installplan
 
+
+onboard ppdm:
+
 ```bash
-oc patch installplan $(oc get installplan -n velero-ppdm -o jsonpath='{.items[0].metadata.name}') -n velero-ppdm --type merge -p '{"spec":{"approved":true}}'
+export PPDM_RBAC_SOURCE=https://raw.githubusercontent.com/bottkars/ppdm-rbac/19.22.0-24/
+ansible-playbook ~/workspace/ansible_ppdm/130.1_playbook_rbac_add_k8s_to_ppdm.yaml
+```
+
+
+
+pattch installplan
+```bash
+
+NS="velero-ppdm"
+
+echo "Waiting for a pending InstallPlan in namespace: $NS ..."
+while true; do
+  # Grab the first not-approved InstallPlan
+  IP_NAME=$(oc get installplan -n "$NS" -o jsonpath='{range .items[?(@.spec.approved==false)]}{.metadata.name}{"\n"}{end}' | head -n1)
+  if [[ -n "${IP_NAME:-}" ]]; then
+    echo "Found pending InstallPlan: $IP_NAME"
+    break
+  fi
+  sleep 5
+done
+
+oc patch installplan $(oc get installplan -n v$NS -o jsonpath='{.items[0].metadata.name}') -n $NS --type merge -p '{"spec":{"approved":true}}'
 ```
 
 ### Option 2, using OADP from old Catalog (1.4.3 for openshift < 4.19)
