@@ -297,7 +297,7 @@ while true; do
   sleep 5
 done
 
-oc patch installplan $(oc get installplan -n v$NS -o jsonpath='{.items[0].metadata.name}') -n $NS --type merge -p '{"spec":{"approved":true}}'
+oc patch installplan $(oc get installplan -n $NS -o jsonpath='{.items[0].metadata.name}') -n $NS --type merge -p '{"spec":{"approved":true}}'
 ```
 
 ### Option 2, using OADP from old Catalog (1.4.3 for openshift < 4.19)
