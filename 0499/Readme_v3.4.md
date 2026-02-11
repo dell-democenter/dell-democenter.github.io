@@ -198,10 +198,8 @@ OADP Operator not deployed.
 On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties. Insert:
 
 ```bash
-cat << EOF >> /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties
-k8s.oadp.version=1.5.3
-k8s.oadp.channel=stable
-EOF
+FILE="/usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties"; for KEY in k8s.oadp.version k8s.oadp.channel; do VAL=$( [ "$KEY" = k8s.oadp.version ] && echo 1.5.3 || echo stable ); cp -a "$FILE" "${FILE}.bak.$(date +%Y%m%d%H%M%S)" 2>/dev/null || true; tmp="$(mktemp)"; awk -v key="$KEY" -v val="$VAL" 'BEGIN{f=0}{if($0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*="){if(!f){print key"="val; f=1}; next} print} END{if(!f) print key"="val}' "$FILE" > "$tmp" && mv "$tmp" "$FILE"; done
+``
 
 cndm restart
 
