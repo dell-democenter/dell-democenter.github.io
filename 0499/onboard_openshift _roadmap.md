@@ -2,13 +2,16 @@
 
 1. **Validate required OADP version from Install Guide and Patch CNDM if required**
 
-   * Update **CNDM / controller configuration** to use the required **OADP version (for example, OADP stable 1.5.3)** as documented for your PPDM release  
-| OCP Version    | OADP Version | OADP Channel |
-|----------------|--------------|--------------|
-| 4.14           | 1.3.0        | stable-1.3   |
-| 4.15–4.18*     | 1.4.3        | stable-1.4   |
-| 4.19           | 1.5.x        | stable       |
+   * Update **CNDM / controller configuration** to use the required **OADP version (for example, OADP stable 1.5.3)** as documented for your PPDM release
+  
+     
+| OCP Version | OADP Version | OADP Channel |
+|-------------|--------------|--------------|
+| 4.14        | 1.3.0        | stable-1.3   |
+| 4.15–4.18*  | 1.4.3        | stable-1.4   |
+| 4.19        | 1.5.x        | stable       |
 
+**Note:** OCP 4.15–4.18 is supported by default; no additional configuration is needed.
 **Note:** OCP 4.15–4.18 is supported by default; no additional configuration is needed.
 
 2. **Apply PPDM RBAC resources and Create discovery service account  static token**
