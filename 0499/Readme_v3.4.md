@@ -264,7 +264,7 @@ if [ "$CUR" != "$VAL" ]; then
 fi
 
 # Optional: restart only if something changed
-# [ "$CHANGED" -eq 1 ] && cndm restart
+[ "$CHANGED" -eq 1 ] && cndm restart
 
 ```
 
