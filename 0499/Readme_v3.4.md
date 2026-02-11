@@ -195,13 +195,76 @@ OADP Operator not deployed.
 
 ### Option 1, use new OADP version 1.5.3
 
-On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties. Insert:
+On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties.
+````bash
+# Path and desired values
+FILE="/usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties"
+VER="1.5.3"
+CHAN="stable"
 
-```bash
-FILE="/usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties"; for KEY in k8s.oadp.version k8s.oadp.channel; do VAL=$( [ "$KEY" = k8s.oadp.version ] && echo 1.5.3 || echo stable ); cp -a "$FILE" "${FILE}.bak.$(date +%Y%m%d%H%M%S)" 2>/dev/null || true; tmp="$(mktemp)"; awk -v key="$KEY" -v val="$VAL" 'BEGIN{f=0}{if($0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*="){if(!f){print key"="val; f=1}; next} print} END{if(!f) print key"="val}' "$FILE" > "$tmp" && mv "$tmp" "$FILE"; done
-``
+# Ensure the file exists
+[ -f "$FILE" ] || touch "$FILE"
 
-cndm restart
+CHANGED=0
+
+# --- k8s.oadp.version ---
+KEY="k8s.oadp.version"
+VAL="$VER"
+CUR=$(awk -v key="$KEY" '
+  $0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*=" {
+    line=$0
+    sub(/^[ \t]*#?[ \t]*/,"",line)
+    sub(/[ \t]*=[ \t]*/,"=",line)
+    split(line, a, "=")
+    print a[2]
+    exit
+  }' "$FILE")
+if [ "$CUR" != "$VAL" ]; then
+  tmp="$(mktemp)"
+  awk -v key="$KEY" -v val="$VAL" '
+    BEGIN{f=0}
+    {
+      if ($0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*=") {
+        if (!f) { print key"="val; f=1 }
+        next
+      }
+      print
+    }
+    END { if (!f) print key"="val }
+  ' "$FILE" > "$tmp" && mv "$tmp" "$FILE"
+  CHANGED=1
+fi
+
+# --- k8s.oadp.channel ---
+KEY="k8s.oadp.channel"
+VAL="$CHAN"
+CUR=$(awk -v key="$KEY" '
+  $0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*=" {
+    line=$0
+    sub(/^[ \t]*#?[ \t]*/,"",line)
+    sub(/[ \t]*=[ \t]*/,"=",line)
+    split(line, a, "=")
+    print a[2]
+    exit
+  }' "$FILE")
+if [ "$CUR" != "$VAL" ]; then
+  tmp="$(mktemp)"
+  awk -v key="$KEY" -v val="$VAL" '
+    BEGIN{f=0}
+    {
+      if ($0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*=") {
+        if (!f) { print key"="val; f=1 }
+        next
+      }
+      print
+    }
+    END { if (!f) print key"="val }
+  ' "$FILE" > "$tmp" && mv "$tmp" "$FILE"
+  CHANGED=1
+fi
+
+# Optional: restart only if something changed
+# [ "$CHANGED" -eq 1 ] && cndm restart
 
 ```
 
