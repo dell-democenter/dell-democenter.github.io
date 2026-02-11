@@ -284,6 +284,9 @@ ansible-playbook ~/workspace/ansible_ppdm/130.1_playbook_rbac_add_k8s_to_ppdm.ya
 pattch installplan
 ```bash
 
+#!/usr/bin/env bash
+set -euo pipefail
+
 NS="velero-ppdm"
 
 echo "Waiting for a pending InstallPlan in namespace: $NS ..."
@@ -297,7 +300,11 @@ while true; do
   sleep 5
 done
 
-oc patch installplan $(oc get installplan -n $NS -o jsonpath='{.items[0].metadata.name}') -n $NS --type merge -p '{"spec":{"approved":true}}'
+echo "Patching InstallPlan to approved=true ..."
+oc patch installplan "$IP_NAME" -n "$NS" --type merge -p '{"spec":{"approved":true}}'
+
+echo "Done."
+
 ```
 
 ### Option 2, using OADP from old Catalog (1.4.3 for openshift < 4.19)
