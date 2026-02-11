@@ -200,7 +200,7 @@ On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versio
 ```bash
 cat << EOF >> /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties
 k8s.oadp.version=1.5.3
-k8s.oadp.channel=stable.
+k8s.oadp.channel=stable
 EOF
 
 cndm restart
