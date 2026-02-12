@@ -269,7 +269,7 @@ fi
 ```
 
 
-Onboard /  Discover K8S , then patchaaprove the installplan
+Onboard /  Discover K8S , then patch / aprove the installplan
 
 
 onboard ppdm:
@@ -281,7 +281,7 @@ ansible-playbook ~/workspace/ansible_ppdm/130.1_playbook_rbac_add_k8s_to_ppdm.ya
 
 
 
-pattch installplan
+patch installplan
 ```bash
 
 #!/usr/bin/env bash
