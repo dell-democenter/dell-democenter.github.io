@@ -193,12 +193,6 @@ OADP Operator not deployed.
 
 ### Option 1, use new OADP version 1.5.3
 
-# actual issues 
-## openshift issues here (SOLUTION)  
-OADP Operator not deployed. 
-
-### Option 1, use new OADP version 1.5.3
-
 On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties.
 ```bash
 # Path and desired values
