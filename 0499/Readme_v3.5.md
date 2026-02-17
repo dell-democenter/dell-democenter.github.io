@@ -388,7 +388,7 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 # release notes 0499v3.5
 ## new
-- hana01 + hana02 with SLES15SP7 and HANA 2.0 and SPS08
+- hana01 + hana02 with SLES15 SP7 and HANA 2.0 SPS08
  	
 ## changed
 - updated SRP stuff to latest releases
