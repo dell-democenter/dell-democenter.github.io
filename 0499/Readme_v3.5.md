@@ -6,7 +6,7 @@
 - to gain experience on your own to be come a trusted advisor
 - to prepare an individually tailored customer demo
 - to recreate customer scenarios
-- to reproduce errors
+- to reproduce "issues" ;-)
 
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
