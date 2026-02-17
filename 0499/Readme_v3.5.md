@@ -4,7 +4,7 @@
 ### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
 ### on this playground we give you the chance to install and configure Dell Technologies products from scratch on your own to gain experience !
 
-# lab overview
+# lab overview !!! always check this overview and the corrsponfing table below !!!
 ### systems / workloads / connectivity 
 <img width="1598" height="895" alt="image" src="https://github.com/user-attachments/assets/38ec8a07-180f-4b58-b544-77d74cf30f06" />
 
@@ -408,7 +408,7 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - MSR ist now pre-installed and runs on nutanix
 - proxmox PVE (promox virtual environment) v9.0 installed
 - proxmox PBS (promox backup server) v4.0 installed
-- syslog server
+- syslog server (graylog)
 	
 ## changed
 - Updated Openshift to 4.20.3
