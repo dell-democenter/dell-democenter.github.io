@@ -1,4 +1,4 @@
-># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v34) 0499v3.5**
+># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v35) 0499v3.5**
 
 # what is HOL-0499 ?  
 ### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
@@ -386,16 +386,27 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
 
+# release notes 0499v3.5
+## new
+- hana01 + hana02 with SLES15SP7 and HANA 2.0 and SPS08
+ 	
+## changed
+- updated SRP stuff to latest releases
+
+## removed
+- none
+
 
 # release notes 0499v3.4
 ## new
 - 2FAGuard tool for scan TOTP tokens
  	
 ## changed
-- moved some workloads from nutanix to proxmox
+- moved some workloads from nutanix to proxmox. check overview !
 - Updated SRP stuff to latest releases
 
 ## removed
+- none
 
 # release notes 0499v3.3
 ## new
@@ -403,23 +414,18 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - MSR ist now pre-installed and runs on nutanix
 - proxmox PVE (promox virtual environment) v9.0 installed
 - proxmox PBS (promox backup server) v4.0 installed
- 	
-
-
-# release notes 0499v3.3
-## new
 - syslog server
- 	
+	
 ## changed
 - Updated Openshift to 4.20.3
 - Updated DDVE/DDMC to 8.6
 - Updated PPDM and CRS to 19.22
 - Updated CyberSense
-- 
 
 ## removed
+- none
 
-# release notes 0499v3.3
+# release notes 0499v3.2
 ## new
 - Nutanix Prismcentral aka. PC v7.3 runs now per default on nutanix cluster
 - MSR ist now pre-installed and runs on nutanix
@@ -439,7 +445,7 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 
 
-# release notes 0499v3.2
+# release notes 0499v3.1
 ## new
 - Nutanix AHV one node cluster with 
 - Hycu R-Cloud
