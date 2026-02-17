@@ -1,6 +1,6 @@
 ># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v34) 0499v3.5**
 
-# what is HOL-0499 BETA ?  
+# what is HOL-0499 ?  
 ### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
 ### on this playground we give you the chance to install and configure Dell Technologies products from scratch on your own to gain experience !
 
