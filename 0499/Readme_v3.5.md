@@ -4,7 +4,8 @@
 ### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
 ### on this playground we give you the chance to install and configure Dell Technologies products from scratch on your own to gain experience !
 
-# lab overview !!! always check this overview and the corrsponfing table below !!!
+# lab overview - what systems are running where ?
+please always check this overview and the corresponding table below !!!
 ### systems / workloads / connectivity 
 <img width="1598" height="895" alt="image" src="https://github.com/user-attachments/assets/38ec8a07-180f-4b58-b544-77d74cf30f06" />
 
