@@ -1,8 +1,8 @@
 ># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v35) 0499v3.5**
 
 # what is HOL-0499 ?  
-### objective is to have a personal lab that represents a more or less “realistic” customer environment with several workloads.
-### 0499 give you the opportunity to install and configure Dell Technologies products:
+### 0499 gives you a personal lab that represents a more or less “realistic” customer environment with several workloads.
+### 0499 gives you the opportunity to install and configure Dell Technologies products:
 - to gain experience on your own to be come a trusted advisor
 - to prepare an individually tailored customer demo
 - to recreate customer scenarios
