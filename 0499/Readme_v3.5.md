@@ -1,8 +1,12 @@
 ># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v35) 0499v3.5**
 
 # what is HOL-0499 ?  
-### objective is to have a playground that represents a more or less “realistic” customer environment with several workloads.
-### on this playground we give you the chance to install and configure Dell Technologies products from scratch on your own to gain experience !
+### objective is to have a personal lab that represents a more or less “realistic” customer environment with several workloads.
+### 0499 give you the chance to install and configure Dell Technologies products:
+- to gain experience to be come a trusted advisor
+- to prepare an individually tailored customer demo
+- to recreate customer scenarios
+- to reproduce errors
 
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
