@@ -57,8 +57,8 @@ dpa |	administrator  | DPA discontinued | | proxmox
 dpc |	administrator@dpc.local  | DPC discontinued	| | nutanix
 exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system | vmware
 file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server | vmware
-hana01  |		H01adm  |		hana hxe 2.0 SPS08  |	 	SAP HANA  | vmware 
-hana02  |		H02adm  |		hana hxe 2.0 SPS08  |	 	SAP HANA  | vmware 
+hana01  |		H01adm  |		hana hxe 2.0 SPS08  | ! user SYSTEM for backup | vmware 
+hana02  |		H02adm  |		hana hxe 2.0 SPS08  | ! user SYSTEM for backup | vmware 
 ocpnode0+1+2  |		kubeadmin  |		openshift cluster  | Kubernetes + virtualization from RedHat |  democenter level
 powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  | vmware
 powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  | vmware
