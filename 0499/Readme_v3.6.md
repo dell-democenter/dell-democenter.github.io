@@ -11,9 +11,7 @@
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
 ### systems / workloads / connectivity 
-<img width="1598" height="895" alt="image" src="https://github.com/user-attachments/assets/38ec8a07-180f-4b58-b544-77d74cf30f06" />
-
-
+<img width="1300" height="733" alt="image" src="https://github.com/user-attachments/assets/7767e53b-e737-485c-b4f5-7eab49603f6a" />
 
 ### Note on VLAN2
 VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
