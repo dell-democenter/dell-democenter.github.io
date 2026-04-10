@@ -331,6 +331,14 @@ option#1
 
 option#2
 - ssh into CR via mremoteNG
+check how many containers are running
+```bash
+sudo docker ps 
+```
+if you see just 2 of them running like this
+<img width="1021" height="77" alt="image" src="https://github.com/user-attachments/assets/798c3150-735d-4356-9281-e78c5e1c2f20" />
+
+do the following taks
 ```bash
 sudo /opt/dellemc/cr/bin/crsetup.sh --verifypassword
 ```
