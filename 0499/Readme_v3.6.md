@@ -36,7 +36,7 @@ nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 # workloads
 FDQN | account | workload  |  notes  | runs on
 ------|---------------------|------------|-----------|-------------  
-dap | admin | Dell Automation Platform | portal and orchestrator | vmware
+portal | admin | Dell Automation Platform aka. DAP | portal and orchestrator | vmware
 edge-node | N/A | native edge node | compute and storage for edge | democenter level
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level
 esxi01+02 | root | esxi | broadcomm hypervisors | democenter level
