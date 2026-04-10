@@ -76,7 +76,7 @@ ppdm-1-search | NA | PPDM search node | | vmware
 ppdm-1-report | NA | PPDM report node | | vmware
 sql03+04 | administrator@demo.local | SQL 2022 AAG | |  vmware   
 msr | admin | multi sytems reporting | ppdm-1 already onboarded | DAP  
-***| *** | *** | *** | ***
+******** | ******** | ******** | ******** | ********
 vault-esxi | root | esxi | for simulating a CR vault area  | demonceter level
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware  
 vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen” | vmware
