@@ -321,6 +321,15 @@ sudo /usr/local/dpc/bin/dpc status
 - wait 1-2 minutes and try to login in UI again
 
 ## CR login in UI not possible (SOLUTION)
+- webUI not responsive
+option#1
+	when you check  console of the CR vm you see just this and a blinking cursor...
+<img width="1104" height="329" alt="image" src="https://github.com/user-attachments/assets/00f9816f-3c36-41d5-b06f-7f8fbdc92ae6" />
+	reset or poweroff/on the CR vm until the login prompt appears
+<img width="695" height="225" alt="image" src="https://github.com/user-attachments/assets/53396b04-072c-4271-a2b5-745958740aaf" />
+
+
+option#2
 - ssh into CR via mremoteNG
 ```bash
 sudo /opt/dellemc/cr/bin/crsetup.sh --verifypassword
