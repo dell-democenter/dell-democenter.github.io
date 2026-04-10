@@ -1,6 +1,6 @@
-># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v35) 0499v3.6 BETA **
+># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v36) 0499v3.6**
 
-# what is HOL-0499 BETA !!! ?  
+# what is HOL-0499 !!! ?  
 ### 0499 gives you a personal lab that represents a more or less “realistic” customer environment with several workloads.
 ### 0499 gives you the opportunity to install and configure Dell Technologies products:
 - to gain experience on your own to be come a trusted advisor
@@ -38,14 +38,14 @@ nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 # workloads
 FDQN | account | workload  |  notes  | runs on
 ------|---------------------|------------|-----------|-------------  
+dap | admin | Dell Automation Platform | portal and orchestrator | vmware
+edge-node | N/A | native edge node | compute and storage for edge | democenter level
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level
 esxi01+02 | root | esxi | broadcomm hypervisors | democenter level
 ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter level
 ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix
 ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix
 nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to nutanix | nutanix
-proxmox1 | root | proxmox web UI | is doing KVM and LXC | democenter level
-pbs | root | proxmox backup server | is doing backup/restore | democenter level
 nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNS | | democenter level
 ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
@@ -183,13 +183,6 @@ every nutanix node runs a control vm (CVM) that controls the underlying node. li
 
 ## prismcentral 
 some kind of "manager of managers" aka. vcenter. prismcentral aka. PC can control multiple nutanix clusters.  
-
-## proxmox 
-is a single node proxmox cluster. can run KVM vm´s and linux containers. for demoing what proxmox is and most important whts it´s NOT.   
-pbs ande backup schedule is already configured and onboarded.
-
-## pbs
-proxmox backup server aka. PBS. a product that is specific designed to protect proxmox environments. it´s doing ceompression and dedupe, always.
 
 
 # actual issues 
@@ -384,6 +377,20 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ## vm's did not get DHCP ip adress
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
+
+# release notes 0499v3.6
+## new
+- Dell Automation Platform with a single edge node  
+  Resource limtations forces us to let run the DAP Orchestration as a vmware vm  
+  Native Edge node itself is running on democenter level and therefore same speed like other hypervisors
+  
+## changed
+- updated SRP stuff to latest releases
+- modified the structure of shortcuts in edge browser
+
+## removed
+- promox PVE and PBS
+  
 
 # release notes 0499v3.5
 ## new
