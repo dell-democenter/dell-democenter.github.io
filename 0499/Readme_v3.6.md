@@ -184,83 +184,6 @@ some kind of "manager of managers" aka. vcenter. prismcentral aka. PC can contro
 
 
 # actual issues 
-## openshift issues here (SOLUTION)  
-OADP Operator not deployed. 
-
-### Option 1, use new OADP version 1.5.3
-
-On PPDM host, open the file /usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties.
-```bash
-# Path and desired values
-FILE="/usr/local/brs/lib/cndm/config/k8s-dependency-versions-app.properties"
-VER="1.5.3"
-CHAN="stable"
-
-# Ensure the file exists
-[ -f "$FILE" ] || touch "$FILE"
-
-CHANGED=0
-
-# --- k8s.oadp.version ---
-KEY="k8s.oadp.version"
-VAL="$VER"
-CUR=$(awk -v key="$KEY" '
-  $0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*=" {
-    line=$0
-    sub(/^[ \t]*#?[ \t]*/,"",line)
-    sub(/[ \t]*=[ \t]*/,"=",line)
-    split(line, a, "=")
-    print a[2]
-    exit
-  }' "$FILE")
-if [ "$CUR" != "$VAL" ]; then
-  tmp="$(mktemp)"
-  awk -v key="$KEY" -v val="$VAL" '
-    BEGIN{f=0}
-    {
-      if ($0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*=") {
-        if (!f) { print key"="val; f=1 }
-        next
-      }
-      print
-    }
-    END { if (!f) print key"="val }
-  ' "$FILE" > "$tmp" && mv "$tmp" "$FILE"
-  CHANGED=1
-fi
-
-# --- k8s.oadp.channel ---
-KEY="k8s.oadp.channel"
-VAL="$CHAN"
-CUR=$(awk -v key="$KEY" '
-  $0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*=" {
-    line=$0
-    sub(/^[ \t]*#?[ \t]*/,"",line)
-    sub(/[ \t]*=[ \t]*/,"=",line)
-    split(line, a, "=")
-    print a[2]
-    exit
-  }' "$FILE")
-if [ "$CUR" != "$VAL" ]; then
-  tmp="$(mktemp)"
-  awk -v key="$KEY" -v val="$VAL" '
-    BEGIN{f=0}
-    {
-      if ($0 ~ "^[ \t]*#?[ \t]*"key"[ \t]*=") {
-        if (!f) { print key"="val; f=1 }
-        next
-      }
-      print
-    }
-    END { if (!f) print key"="val }
-  ' "$FILE" > "$tmp" && mv "$tmp" "$FILE"
-  CHANGED=1
-fi
-
-# Optional: restart only if something changed
-[ "$CHANGED" -eq 1 ] && cndm restart
-
-```
 
 
 Onboard /  Discover K8S , then patch / aprove the installplan
@@ -269,45 +192,11 @@ Onboard /  Discover K8S , then patch / aprove the installplan
 onboard ppdm:
 
 ```bash
-export PPDM_RBAC_SOURCE=https://raw.githubusercontent.com/bottkars/ppdm-rbac/19.22.0-24/
+cd ~/workspace/0499/lab3
+# envrc will export PPDM_RBAC_SOURCE=https://raw.githubusercontent.com/bottkars/ppdm-rbac/20.1.0-17/
 ansible-playbook ~/workspace/ansible_ppdm/130.1_playbook_rbac_add_k8s_to_ppdm.yaml
 ```
 
-
-
-patch installplan
-```bash
-
-#!/usr/bin/env bash
-set -euo pipefail
-
-NS="velero-ppdm"
-
-echo "Waiting for a pending InstallPlan in namespace: $NS ..."
-while true; do
-  # Grab the first not-approved InstallPlan
-  IP_NAME=$(oc get installplan -n "$NS" -o jsonpath='{range .items[?(@.spec.approved==false)]}{.metadata.name}{"\n"}{end}' | head -n1)
-  if [[ -n "${IP_NAME:-}" ]]; then
-    echo "Found pending InstallPlan: $IP_NAME"
-    break
-  fi
-  sleep 5
-done
-
-echo "Patching InstallPlan to approved=true ..."
-oc patch installplan "$IP_NAME" -n "$NS" --type merge -p '{"spec":{"approved":true}}'
-
-echo "Done."
-
-```
-
-### Option 2, using OADP from old Catalog (1.4.3 for openshift < 4.19)
-The OADP we use is Part of the 4.17 Catalog which is in a differnt catalogue source. Therefore we need to patch the source, and then manually approve the Installplan ( Or Checlk UI to do it :-) )  
-```bash
-oc patch subscription redhat-oadp-operator -n velero-ppdm --type=merge -p '{"spec":{"source": "redhat-operators-417"}}'
-
-oc patch installplan $(oc get installplan -n velero-ppdm -o jsonpath='{.items[0].metadata.name}') -n velero-ppdm --type merge -p '{"spec":{"approved":true}}'
-```
 
 ## DPC login in UI not possible (SOLUTION)
 - ssh into DPC via mremoteNG
