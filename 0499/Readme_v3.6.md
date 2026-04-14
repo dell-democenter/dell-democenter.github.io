@@ -182,6 +182,10 @@ every nutanix node runs a control vm (CVM) that controls the underlying node. li
 ## prismcentral 
 some kind of "manager of managers" aka. vcenter. prismcentral aka. PC can control multiple nutanix clusters.  
 
+## syslog
+thats a greylog server with 3 running "inputs" UDP:514 / TCP:514 / TLS:6514
+FYI: if you want to use TLS on your device you have to "trust" the cetificate chain
+
 
 # actual issues 
 
