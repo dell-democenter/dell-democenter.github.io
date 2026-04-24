@@ -1,6 +1,6 @@
 ># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v36) 0499v3.7**
 
-# !!! 3.7 IS IN DEV PROGESS !!!
+# !!! 3.7 IS IN DEV PROGRESS !!!
 # what is HOL-0499 !!! ?  
 ### 0499 gives you a personal lab that represents a more or less “realistic” customer environment with several workloads.
 ### 0499 gives you the opportunity to install and configure Dell Technologies products:
