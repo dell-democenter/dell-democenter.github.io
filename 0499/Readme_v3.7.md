@@ -12,7 +12,7 @@
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
 ### systems / workloads / connectivity 
-<img width="1306" height="733" alt="image" src="https://github.com/user-attachments/assets/22752c31-3bbb-4dff-aed2-929cdde9fed1" />
+<img width="1289" height="728" alt="image" src="https://github.com/user-attachments/assets/4420b0da-8cd1-455a-a5f9-ac3bf22aa39a" />
 
 ### Note on VLAN2
 VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
@@ -45,7 +45,7 @@ ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter lev
 ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix
 ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix
 nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to nutanix | nutanix
-nas | admin | NFS Datastore for vsphere | rocky linux and zfs | democenter level
+nas | admin | NFS / SMB / HTTP / S3 central datastore | rocky linux and zfs | democenter level
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNS | | democenter level
 ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
 ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level
@@ -102,6 +102,9 @@ contains pre-configured SSH and RDP sessions for almost all workloads and system
 ### browser
 MS EDGE is default browser. Firefox ist installed but not everywhere supported, so just for doublechecking for UI "issues". 
 
+### XLaunch (VcXsrv)
+used to run a X11 server for remote X11 sessions from linux systems
+
 ### DbGate
 really nice tool for accessing/editing/modifying databases like mariaDB / mySQL / PostgreSQL / MongoDB with a easy to use UI interface.
 all DBs entry already provided
@@ -118,7 +121,10 @@ nice TOTP tool for windows to scan your QR codes when activating 2FA for user of
 dont use your own TOTP tzool on your mobile ;-)
 
 ###WinSCP 
-well known tool for transferring files to linux systems.
+well known tool for transferring files to linux systems.  
+some pre-defnined session available like:  
+S3 connect to nas.demo.local for local artifacts 
+SCP connect to deft.dell.com for remote artifacts   
 
 ## vcenter01 (by broadcom)
 use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcom. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
@@ -167,6 +173,10 @@ fresh deployed, joinded the ADS demo.local domain. has some file in the \\powers
 
 ## nas 
 is running rocky linux and doing the NFS datstore job for the esxi servers. DONT TOUCH ;-)  
+addiontally to the NFS job there is are artifacts accesible via SMB/HTTP/S3 with simultaneous access  
+SMB on lauchpad look for "Z: drive letter" or "\\\nas.demo.local\artifacts\artifacts"     
+HTTP open your browser or curl or wget or you name it and locate to "http://nas.demo.local"  
+S3 open your S3 tool like pre-installed winscp and locate to http://nas.demo.local:9000/artifacts
 
 ## scvmm (system center virtual machine manager)
 the old style way to manage vm´s
