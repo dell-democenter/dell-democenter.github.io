@@ -304,6 +304,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ## changed
 - hotfix for PPDM 20.1  
 - modified the structure of shortcuts in edge browser
+<img width="651" height="335" alt="image" src="https://github.com/user-attachments/assets/061f3f12-0490-40a7-8f83-6ff4e6b77b6e" />
+- you see some kind of a structure grouped by "topic" more or less....
 
 ## removed
 - none
@@ -317,6 +319,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ## changed
 - updated SRP stuff to latest releases
 - modified the structure of shortcuts in edge browser
+- <img width="802" height="160" alt="image" src="https://github.com/user-attachments/assets/2e39b4f2-c74a-496c-bb9a-e681466e0e55" />
+- you see some kind of a structure grouped by "topic" more or less....
+
 
 ## removed
 - promox PVE and PBS
