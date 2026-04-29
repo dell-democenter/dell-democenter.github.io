@@ -1,6 +1,5 @@
 ># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v36) 0499v3.7**
 
-# !!! 3.7 IS IN DEV PROGRESS !!!
 # what is HOL-0499 !!! ?  
 ### 0499 gives you a personal lab that represents a more or less “realistic” customer environment with several workloads.
 ### 0499 gives you the opportunity to install and configure Dell Technologies products:
@@ -296,6 +295,18 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ## vm's did not get DHCP ip adress
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
+
+
+# release notes 0499v3.7
+## new
+- nas extended with SMB / HTTP / S3 simultaneous access.
+    
+## changed
+- hotfix for PPDM 20.1  
+- modified the structure of shortcuts in edge browser
+
+## removed
+- none
 
 # release notes 0499v3.6
 ## new
