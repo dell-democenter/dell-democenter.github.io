@@ -301,7 +301,7 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 
 # release notes 0499v4.0
-## new
+## !!! NEW !!!
 - awsome stuff arrived: "self service vm powercycle"  
   ability to poweron-off vm´s  
   ability to connect to console of powered on vm  
