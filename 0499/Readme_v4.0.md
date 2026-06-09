@@ -306,7 +306,11 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
   ability to poweron-off vm´s  
   ability to connect to console of powered on vm  
   click on the lower left three dot menu and click on "explore"  
-  <img width="669" height="497" alt="image" src="https://github.com/user-attachments/assets/8a86bcd0-7c67-4c08-9cf1-4d7a7fec623c" />
+<img width="431" height="285" alt="image" src="https://github.com/user-attachments/assets/626bdc11-e7da-4d98-9823-32efb4a46c5e" />
+
+
+
+
   
 
 
