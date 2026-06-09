@@ -305,14 +305,12 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - awsome stuff arrived: "self service vm powercycle"  
   ability to poweron-off vm´s  
   ability to connect to console of powered on vm  
-  click on the lower left three dot menu and click on "explore"  
-<img width="431" height="285" alt="image" src="https://github.com/user-attachments/assets/626bdc11-e7da-4d98-9823-32efb4a46c5e" />
+  open on the lower left three dot menu and click on "explore"    
+<img width="431" height="285" alt="image" src="https://github.com/user-attachments/assets/626bdc11-e7da-4d98-9823-32efb4a46c5e" />  
 
-
-
-
-  
-
+  you will see a list of vm´s available in your vapp  
+  use connect / off / on buttons accordingly to your needs.  
+<img width="432" height="436" alt="image" src="https://github.com/user-attachments/assets/c31867d3-8fa7-462c-8e04-35f8ad7659d9" />  
 
     
 ## changed
