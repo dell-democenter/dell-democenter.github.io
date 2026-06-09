@@ -1,6 +1,5 @@
 ># **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v40) 0499v4.0**
 
-# !!! NOT IN PRODUCTION !!!    
 # what is HOL-0499 ?  
 ### 0499 gives you a personal lab that represents a more or less “realistic” customer environment with several workloads.
 ### 0499 gives you the opportunity to install and configure Dell Technologies products:
@@ -300,7 +299,14 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 # release notes 0499v4.0
 ## new
-- awsome stuff
+- awsome stuff arrived: "self service vm powercycle"  
+  ability to poweron-off vm´s  
+  ability to connect to console of powered on vm  
+  click on the lower left three dot menu and click on "explore"  
+  <img width="669" height="497" alt="image" src="https://github.com/user-attachments/assets/8a86bcd0-7c67-4c08-9cf1-4d7a7fec623c" />
+  
+
+
     
 ## changed
 - everything
