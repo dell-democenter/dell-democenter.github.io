@@ -37,55 +37,55 @@ vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
 nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 
 # workloads
-FDQN | account | workload  |  notes  | runs on
-------|---------------------|------------|-----------|-------------  
-portal | admin | Dell Automation Platform aka. DAP | portal and orchestrator | vmware
-edge-node | N/A | native edge node | compute and storage for vm´s | democenter level
-vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level
-esxi01+02 | root | esxi | broadcomm hypervisors | democenter level
-ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter level
-ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix
-ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix
-nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to nutanix | nutanix
-nas | admin | NFS / SMB / HTTP / S3 central datastore | rocky linux and zfs | democenter level
-launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNS | | democenter level
-ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware
-ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level
-ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level
-sql01+02 | administrator@demo.local | SQL 2019 AAG  | |	running on hyper-v 
-ddmc |	sysadmin | ddmc | NO smart scale included anymore ! | DAP 
-dpa |	administrator  | DPA discontinued | | DAP 	
-dpc |	administrator@dpc.local  | DPC discontinued	| | vmware
-exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system | vmware
-file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server | vmware
-hana01  |		H01adm  |		hana hxe 2.0 SPS08  | user **SYSTEM** for backup | vmware 
-hana02  |		H02adm  |		hana hxe 2.0 SPS08  | user **SYSTEM** for backup | vmware 
-ocpnode0+1+2  |		kubeadmin  |		openshift cluster  | Kubernetes + virtualization from RedHat |  democenter level
-powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  | vmware
-powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  | vmware
-scvmm  |		administrator@demo.local  |		system center virtual machine manager  |	old stlye UI fpr central managing vm´s | hyper-v 
-wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  | hyper-v
-nve-1  |		administrator  |		Networker  |	legay dataprotection 	| vmware
-nve-1-vproxy  |		admin  |		vproxy 	| | vmware
-ora1  |		root or oracle | Oracle 19c DataGuard active |	use DataStudio Client to access DB with UI | vmware
-ora2  |		root or oracle | Oracle 19c DataGuard standby |	use DataStudio Client to access DB with UI | vmware
-db2 | root or db2inst1 | IBM DB2 |use DataStudio Client to access DB with UI | vmware
-my-sql01 | root | mysql | use DbGate to access DB with UI | vmware
-mariadb-1 | root | mariaDB | use DbGate to access DB with UI| vmware
-postgres-1 | root | PostgreSQL | use DbGate to access DB with UI| vmware
-mongodc-1 | root | mongoDB |  use DbGate to access DB with UI| vmware
-ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI | vmware
-ppdm-1-search | NA | PPDM search node | | vmware
-ppdm-1-report | NA | PPDM report node | | vmware
-sql03+04 | administrator@demo.local | SQL 2022 AAG | |  vmware   
-msr | admin | multi sytems reporting | ppdm-1 already onboarded | DAP  
+FDQN | account | workload  |  notes  | runs on | default state  
+------|---------------------|------------|-----------|-------------|------------  
+portal | admin | Dell Automation Platform aka. DAP | portal and orchestrator | vmware | ON
+edge-node | N/A | native edge node | compute and storage for vm´s | democenter level | ON
+vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level | ON
+esxi01+02 | root | esxi | broadcomm hypervisors | democenter level | ON 
+ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter level | OFF
+ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix | ON  
+ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix | ON  
+nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to nutanix | nutanix | OFF
+nas | admin | NFS / SMB / HTTP / S3 central datastore | rocky linux and zfs | democenter level | ON
+launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNS | | democenter level | ON
+ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware | OFF
+ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level | ON
+ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level | ON
+sql01+02 | administrator@demo.local | SQL 2019 AAG  | |	running on hyper-v | OFF
+ddmc |	sysadmin | ddmc | NO smart scale included anymore ! | DAP | ON
+dpa |	administrator  | DPA discontinued | | DAP | OFF
+dpc |	administrator@dpc.local  | DPC discontinued	| | vmware | OFF
+exchange1+2  |		administrator@demo.local  |		Exchange 2019 DAG  |	 Clustered mail system | vmware | OFF
+file  |		administrator@demo.local  |		Win 2022 file server  |		Central file server | vmware | OFF
+hana01  |		H01adm  |		hana hxe 2.0 SPS08  | user **SYSTEM** for backup | vmware | OFF
+hana02  |		H02adm  |		hana hxe 2.0 SPS08  | user **SYSTEM** for backup | vmware | OFF
+ocpnode0+1+2  |		kubeadmin  |		openshift cluster  | Kubernetes + virtualization from RedHat |  democenter level | OFF
+powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  | vmware | OFF
+powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  | vmware | OFF
+scvmm  |		administrator@demo.local  |		system center virtual machine manager  |	old stlye UI for central managing vm´s | hyper-v | ON 
+wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  | hyper-v | ON
+nve-1  |		administrator  |		Networker  |	legay dataprotection 	| vmware | OFF
+nve-1-vproxy  |		admin  |		vproxy 	| | vmware | OFF
+ora1  |		root or oracle | Oracle 19c DataGuard active |	use DataStudio Client to access DB with UI | vmware | OFF
+ora2  |		root or oracle | Oracle 19c DataGuard standby |	use DataStudio Client to access DB with UI | vmware | OFF
+db2 | root or db2inst1 | IBM DB2 |use DataStudio Client to access DB with UI | vmware | OFF
+my-sql01 | root | mysql | use DbGate to access DB with UI | vmware | OFF
+mariadb-1 | root | mariaDB | use DbGate to access DB with UI| vmware | OFF
+postgres-1 | root | PostgreSQL | use DbGate to access DB with UI| vmware | OFF
+mongodc-1 | root | mongoDB |  use DbGate to access DB with UI| vmware | OFF
+ppdm-1  | admin  | PP Data Manager  | next gen dataprotection with genAI | vmware | OFF
+ppdm-1-search | NA | PPDM search node | | vmware | OFF
+ppdm-1-report | NA | PPDM report node | | vmware | OFF
+sql03+04 | administrator@demo.local | SQL 2022 AAG | |  vmware | OFF   
+msr | admin | multi sytems reporting | ppdm-1 already onboarded | DAP | ON 
 ******** | ******** | ******** | ******** | ********
-vault-esxi | root | esxi | for simulating a CR vault area  | demonceter level
-vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware  
-vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen” | vmware
-vault-ddve | sysadmin | PPDD for the vault | the separated protection target  | vmware
-cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager | vmware
-cs | admin |	CyberSense  | Optional deep forensic  | vmware 
+vault-esxi | root | esxi | for simulating a CR vault area  | demonceter level | OFF
+vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware | OFF  
+vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen” | vmware | ON
+vault-ddve | sysadmin | PPDD for the vault | the separated protection target  | vmware | OFF
+cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager | vmware | OFF
+cs | admin |	CyberSense  | Optional deep forensic  | vmware | OFF
 
 
 # systems in detail  
