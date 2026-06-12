@@ -302,7 +302,7 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 # release notes 0499v4.0
 ## !!! NEW !!!
-- awsome stuff arrived: "self service vm control"  
+- awsome stuff arrived: $${\color{green}"self \space service \space vm \space control"}$$ 
   ability to poweron-off vm´s  
   ability to connect to console of powered on vm  
   open on the lower left three dot menu and click on "explore"    
@@ -314,7 +314,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
     
 ## changed
-- everything
+- not all vm´s on VCD democenter level are running by default  
+  if you need nutanix / openshift / hyper-v / CR vault esxi  
+  you have to start them manually via the new function "self service vm control"  
 
 ## removed
 - none
