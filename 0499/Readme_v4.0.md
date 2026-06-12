@@ -81,6 +81,8 @@ ppdm-1-search | NA | PPDM search node | | vmware | OFF
 ppdm-1-report | NA | PPDM report node | | vmware | OFF
 sql03+04 | administrator@demo.local | SQL 2022 AAG | |  vmware | OFF   
 msr | admin | multi sytems reporting | ppdm-1 already onboarded | DAP | ON 
+syslog | admin | a graylog syslog server | usual UDP - TCP - TLS inputs | DAP | ON 
+
 ******** | ******** | ******** | ******** | ********
 vault-esxi | root | esxi | for simulating a CR vault area  | demonceter level | OFF
 vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware | OFF  
