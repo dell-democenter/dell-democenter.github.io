@@ -1,7 +1,7 @@
 # **click here for [actual issues](#actual-issues) | click here for [release notes](#release-notes-0499v40) 0499v4.0**
 
 
-# **$\color{red}{\textsf{URGENT: READ THE RELEASE NOTES OF 0499v4.0 !!! }}$**
+# **$\color{red}{\textsf{ATTENTION: READ THE RELEASE NOTES OF 0499v4.0 !!! }}$**
 
 # what is HOL-0499 ?  
 ### 0499 gives you a personal lab that represents a more or less “realistic” customer environment with several workloads.
