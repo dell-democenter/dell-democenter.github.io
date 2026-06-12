@@ -249,9 +249,8 @@ do the following taks
 sudo /opt/dellemc/cr/bin/crsetup.sh --verifypassword
 ```
 - use always the default lab Password123!
-- regenerate the expired certificates
 ```bash
-sudo /opt/dellemc/cr/bin/crsetup.sh --securereset
+sudo /opt/dellemc/cr/bin/crsetup.sh --address
 ```
 - wait 1-2 minutes and try to login in UI again
 
