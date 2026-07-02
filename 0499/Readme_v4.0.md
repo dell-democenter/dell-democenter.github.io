@@ -129,7 +129,7 @@ nice java UI for accessing the HANA HXE single node instance.
 nice TOTP tool for windows to scan your QR codes when activating 2FA for user of your choice
 dont use your own TOTP tzool on your mobile ;-)
 
-###WinSCP 
+### WinSCP 
 well known tool for transferring files to linux systems.  
 some pre-defnined session available like:  
 S3 connect to nas.demo.local for local artifacts 
@@ -182,7 +182,7 @@ fresh deployed, joinded the ADS demo.local domain. has some file in the \\powers
 3 node openshift cluster with virtualization. intend to be used for demontrating the K8s and vm workload in PPDM
 a preconfigured environment for cli administration can ve found on the ansible host. 
 ssh into ansible host as admin and cd to ~/workspace/0499/lab3 to souce the environment for oc / kubectl
-
+a guide for ppdm onboaring into openshift can be found here: [openshift onboarding](./onboard_openshift _roadmap.md)
 ## nas 
 is running rocky linux and doing the NFS datstore job for the esxi servers. DONT TOUCH ;-)  
 addiontally to the NFS job there is are artifacts accesible via SMB/HTTP/S3 with simultaneous access  
