@@ -29,9 +29,21 @@ this starts latest ppdm-cli vi podman, exposes port 8080 on ansible host for web
 the ppdm-cl upgrade workflow upgarde a ppdm instance.
 Download you update package to /home/admin/data01 on ansible host
 
-pro tip: mount the nas share to data01 ( will be done aoutmatically in future version )
+pro tip: mount the nas share to data01, usde a new ansinle host session ( will be done autmatically in future version )
 
 *on ansible host*
 ```bash
 sudo mount -t nfs nas.demo.local:/datastore/shared /home/admin/data01
-``
+```
+
+now, form the ppdm-cli container on the ansible host, start the upgrade workflow
+
+*from ppdm-cli container*
+```bash
+ppdm-cli upgrade workflow --continuous --automatic --force --file /data01/artifacts/ppdm/dellemc-ppdm-upgrade-sw-20.2.0.0-14.pkg
+```
+
+
+watch the beauy :-)
+<img width="1357" height="548" alt="image" src="https://github.com/user-attachments/assets/78517bf5-f9e3-41c4-a9ee-19d7d8a35c4a" />
+
