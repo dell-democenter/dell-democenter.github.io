@@ -1,18 +1,29 @@
-### PPDM Kubernetes with OpenShift – Install Roadmap
+# PPDM Kubernetes with OpenShift – Install Roadmap
 
-1. **Validate required OADP version from Install Guide and Patch CNDM if required**
+all oc command are run from the ansible host 
+log in as admin and cd to ~/workspace/0499/lab3
 
-   * Update **CNDM / controller configuration** to use the required **OADP version (for example, OADP stable 1.5.3)** as documented for your PPDM release
+## automatic onboarding
+
+just run the automated ansible playbook.
+Please make sure to checkout the correct git branch if you update you ppdm to a newer version
+
+```bash
+ansible-playbook ~/workspace/ansible_ppdm/130.1_playbook_rbac_add_k8s_to_ppdm.yaml
+```
+
+
+## Manual Onboarding
+1. **Validate required OADP version/ Supported OCP Version**
+
+   **CNDM will update the OADP Version automatically and patch install plans accordingly**
   
      
    | OCP Version | OADP Version | OADP Channel |
    |-------------|--------------|--------------|
    | 4.14        | 1.3.0        | stable-1.3   |
    | 4.15–4.18*  | 1.4.3        | stable-1.4   |
-   | 4.19        | 1.5.x        | stable       |
-
-**Note:** OCP 4.15–4.18 is supported by default; no additional configuration is needed.
-
+   | 4.19-4.21   | 1.5.x        | stable       |
 
 2. **Apply PPDM RBAC resources and Create discovery service account  static token**
 
