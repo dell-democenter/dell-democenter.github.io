@@ -1,4 +1,4 @@
-# **[click here for actual issues](#actual-issues) | [click here for release notes](#release-notes-0499v40) 0499v4.0**
+# **[click here for actual issues](#actual-issues) | [click here for release notes](#release-notes-0499v40) of 0499v4.0**
 
 
 # **$\color{red}{\textsf{ATTENTION: PLEASE READ FIRST THE RELEASE NOTES !!! }}$**
