@@ -146,7 +146,7 @@ some system are already configured to send email like ASUPś and so on. try to c
 is fresh installed and has just the "vcenter01" asset configured.
 it is doing TSDM protection of all vsphere vm's, so if you mess something up, stay cool, you have a backup.
 report and index engine are already deployed.
-want to give ppdm-cli a try ? (ppdm-cli)[./ppdm-cli.md]
+want to give ppdm-cli a try ? [./ppdm-cli.md](ppdm-cli)
 
 ## nve-1
 is fresh installed and has just the "vcenter01" for image backup configured.
