@@ -10,8 +10,8 @@ once ansible host s started, ssh into from remoteNG
 
 run the following:
 
+*on ansible host*
 ```bash
-https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1
 podman run -it --rm --pull=always  -v /home/admin/data01:/data01 \
   -e PPDM_SERVER=ppdm-1.demo.local \
   -e PPDM_USERNAME=admin \
@@ -29,4 +29,9 @@ this starts latest ppdm-cli vi podman, exposes port 8080 on ansible host for web
 the ppdm-cl upgrade workflow upgarde a ppdm instance.
 Download you update package to /home/admin/data01 on ansible host
 
+pro tip: mount the nas share to data01 ( will be done aoutmatically in future version )
 
+*on ansible host*
+```bash
+sudo mount -t nfs nas.demo.local:/datastore/shared /home/admin/data01
+``
