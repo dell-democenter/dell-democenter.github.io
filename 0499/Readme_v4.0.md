@@ -181,8 +181,8 @@ fresh deployed, joinded the ADS demo.local domain. has some file in the \\powers
 ## openshift
 3 node openshift cluster with virtualization. intend to be used for demontrating the K8s and vm workload in PPDM
 a preconfigured environment for cli administration can ve found on the ansible host. 
-ssh into ansible host as admin and cd to ~/workspace/0499/lab3 to souce the environment for oc / kubectl
-a guide for ppdm onboaring into openshift can be found here:  [openshift onboarding](./onboard_openshift_roadmap.md)  
+ssh into ansible host as admin and cd to ~/workspace/0499/lab3 to source the environment for oc / kubectl.  
+a guide for openshift onboaring into ppdm can be found here:  [openshift onboarding](./onboard_openshift_roadmap.md)  
 
 ## nas 
 is running rocky linux and doing the NFS datstore job for the esxi servers. DONT TOUCH ;-)  
