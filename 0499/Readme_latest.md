@@ -110,6 +110,10 @@ MS EDGE is default browser. Firefox ist installed but not everywhere supported, 
 ### XLaunch (VcXsrv)
 used to run a X11 server for remote X11 sessions from linux systems
 
+### ppdm-cli
+a cli interface for ppdm with multiple otions to launch
+see more  [ppdm-cli](./ppdm-cli.md)
+
 ### DbGate
 really nice tool for accessing/editing/modifying databases like mariaDB / mySQL / PostgreSQL / MongoDB with a easy to use UI interface.
 all DBs entry already provided
@@ -125,7 +129,7 @@ nice java UI for accessing the HANA HXE single node instance.
 nice TOTP tool for windows to scan your QR codes when activating 2FA for user of your choice
 dont use your own TOTP tzool on your mobile ;-)
 
-###WinSCP 
+### WinSCP 
 well known tool for transferring files to linux systems.  
 some pre-defnined session available like:  
 S3 connect to nas.demo.local for local artifacts 
@@ -146,6 +150,7 @@ some system are already configured to send email like ASUPś and so on. try to c
 is fresh installed and has just the "vcenter01" asset configured.
 it is doing TSDM protection of all vsphere vm's, so if you mess something up, stay cool, you have a backup.
 report and index engine are already deployed.
+want to give ppdm-cli a try ? [ppdm-cli](./ppdm-cli.md)
 
 ## nve-1
 is fresh installed and has just the "vcenter01" for image backup configured.
@@ -175,6 +180,9 @@ fresh deployed, joinded the ADS demo.local domain. has some file in the \\powers
 
 ## openshift
 3 node openshift cluster with virtualization. intend to be used for demontrating the K8s and vm workload in PPDM
+a preconfigured environment for cli administration can ve found on the ansible host. 
+ssh into ansible host as admin and cd to ~/workspace/0499/lab3 to source the environment for oc / kubectl.  
+a guide for openshift onboaring into ppdm can be found here:  [openshift onboarding](./onboard_openshift_roadmap.md)  
 
 ## nas 
 is running rocky linux and doing the NFS datstore job for the esxi servers. DONT TOUCH ;-)  
