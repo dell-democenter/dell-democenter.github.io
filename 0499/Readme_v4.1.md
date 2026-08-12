@@ -136,6 +136,9 @@ some pre-defnined session available like:
 S3 connect to nas.demo.local for local artifacts 
 SCP connect to deft.dell.com for remote artifacts   
 
+### brows3 
+specialized for S3 and fast as hell.
+
 ## vcenter01 (by broadcom)
 use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcom. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
 
@@ -177,7 +180,7 @@ some storage virtual machine for CIFS / NFS /iSCSI are already prepared
 try some DNAS backup with ppdm or import external ontap storage with powerstore
 
 ## powerscale
-fresh deployed, joinded the ADS demo.local domain. has some file in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
+fresh deployed, joinded the ADS demo.local domain. has some files in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
 
 ## openshift
 3 node openshift cluster with virtualization. intend to be used for demontrating the K8s and vm workload in PPDM
@@ -190,7 +193,7 @@ is running rocky linux and doing the NFS datstore job for the esxi servers. DONT
 addiontally to the NFS job there is are artifacts accesible via SMB/HTTP/S3 with simultaneous access  
 SMB on lauchpad look for "Z: drive letter" or "\\\nas.demo.local\artifacts\artifacts"     
 HTTP open your browser or curl or wget or you name it and locate to "http://nas.demo.local"  
-S3 open your S3 tool like pre-installed winscp and locate to http://nas.demo.local:9000/artifacts
+S3 open your S3 tool like pre-installed winscp or brows3 and locate to http://nas.demo.local:9000/artifacts
 
 ## scvmm (system center virtual machine manager)
 the old style way to manage vm´s
@@ -313,11 +316,16 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 # release notes 0499v4.1
 ## !!! NEW !!!
-- proxmox has arrived again into 0499
-  we have a 2 node cluster with proxmox backup server and datacenter manager !
-
+- proxmox has arrived (again) into 0499  
+  we have a 2 node cluster with PBS aka. proxmox backup server and PDM aka. proxmox datacenter manager !  
+  NFS shared storage is provided by nas.demo.local  
+  no local storage in the proxmox nodes for placing vm´s  
+ 
 ## changed
-- none
+- replaced minio with versityGW  
+- updated powerscale to version 9.13 LTS  
+- hyper-v s2d storage replaced with iscsi lun´s from nas.demo.local  
+  no local storage in the hyper-v nodes for placing vm´s  
   
 ## removed
 - none
