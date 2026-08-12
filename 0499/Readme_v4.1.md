@@ -4,12 +4,14 @@
 # **$\color{red}{\textsf{ATTENTION: WIP !!! PLEASE READ FIRST THE RELEASE NOTES !!! }}$**
 
 # what is HOL-0499 ?  
-### 0499 gives you a personal lab that represents a more or less “realistic” customer environment with several workloads.
+### 0499 gives you a lab that represents a more or less “realistic” customer environment with several workloads.
 ### 0499 gives you the opportunity to install and configure Dell Technologies products:
 - to gain experience on your own to be come a trusted advisor
 - to prepare an individually tailored customer demo
 - to recreate customer scenarios
 - to reproduce "issues" ;-)
+
+---
 
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
@@ -17,16 +19,20 @@ please always check this overview and the corresponding table below !!!
 <img width="1675" height="787" alt="image" src="https://github.com/user-attachments/assets/d4c03f02-8b83-4678-9e13-d0ff13eeb054" />
 
 
-
-
 ### Note on VLAN2
 VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.2.x/24  
 esxi servers already have kernel interfaces. ppdm is already using it for DR backup. powerstore has already connect with data interfaces.  
 connect your systems, like your ddve, to VLAN2 if traffic "separation" is wanted ;-)
 
+
+---
+
+
 # FQDN and DNS suffix  
 ***.demo.local** is the usual DNS suffix   
 naming policy is: use ALWAYS FQDN !!!
+
+---
 
 # account and passwords  
 Username depends, as always, on the workload or the device you want to login or manage   
@@ -38,6 +44,8 @@ FDQN | account/password | workload  |  notes
 vault-ppdm | root/changeme | ppdm in the vault | OS level
 vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
 nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
+
+---
 
 # workloads
 FDQN | account | workload  |  notes  | runs on | default state  
@@ -91,6 +99,8 @@ vault-ddve | sysadmin | PPDD for the vault | the separated protection target  | 
 cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager | vmware | OFF
 cs | admin |	CyberSense  | Optional deep forensic  | vmware | OFF
 
+
+---
 
 # systems in detail  
 ## launchpad  
@@ -214,6 +224,8 @@ some kind of "manager of managers" aka. vcenter. prismcentral aka. PC can contro
 thats a greylog server with 3 running "inputs" UDP:514 / TCP:514 / TLS:6514  
 FYI: if you want to use TLS on your device you have to "trust" the cetificate chain
 
+---
+
 
 # actual issues 
 
@@ -314,6 +326,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - cancel the lab and deploy a new one
 
 
+---
+
+
 # release notes 0499v4.1
 ## !!! NEW !!!
 - proxmox has arrived (again) into 0499  
@@ -331,8 +346,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - none
 
 
+---
 
-  
+ 
 # release notes 0499v4.0
 ## !!! NEW !!!
 - awsome stuff arrived: $${\color{green}"self \space service \space vm \space control"}$$ 
@@ -354,6 +370,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ## removed
 - none
 
+---
+
+
 # release notes 0499v3.7
 ## new
 - nas extended with SMB / HTTP / S3 simultaneous access.
@@ -366,6 +385,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 ## removed
 - none
+
+
+---
 
 # release notes 0499v3.6
 ## new
@@ -384,6 +406,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - promox PVE and PBS
   
 
+---
+
 # release notes 0499v3.5
 ## new
 - hana01 + hana02 with SLES15 SP7 and HANA 2.0 SPS08
@@ -395,6 +419,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - none
 
 
+---
+
 # release notes 0499v3.4
 ## new
 - 2FAGuard tool for scan TOTP tokens
@@ -405,6 +431,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 ## removed
 - none
+
+
+---
 
 # release notes 0499v3.3
 ## new
@@ -422,6 +451,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 ## removed
 - none
+
+---
 
 # release notes 0499v3.2
 ## new
@@ -441,6 +472,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ## removed
 -  esxi node3  
 
+
+---
 
 
 # release notes 0499v3.1
