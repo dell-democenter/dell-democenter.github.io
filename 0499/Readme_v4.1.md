@@ -14,7 +14,8 @@
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
 ### systems / workloads / connectivity 
-<img width="1291" height="712" alt="image" src="https://github.com/user-attachments/assets/425d3793-fbb5-4a28-88c5-62f3f77f2ea3" />
+<img width="1675" height="787" alt="image" src="https://github.com/user-attachments/assets/d4c03f02-8b83-4678-9e13-d0ff13eeb054" />
+
 
 
 
