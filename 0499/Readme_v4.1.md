@@ -54,6 +54,9 @@ portal | admin | Dell Automation Platform aka. DAP | portal and orchestrator | v
 edge-node | N/A | native edge node | compute and storage for vm´s | democenter level | ON
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level | ON
 esxi01+02 | root | esxi | broadcomm hypervisors | democenter level | ON 
+proxmox1+2 | root | PVE | proxmox node with KVM hypervisor | democenter level | OFF
+pdm | root | proxmox datacenter manager | for managing multiple proxmox cluster | proxmox level | ON
+pbs | root | proxmox backup server | proxmox own backup appliance | proxmox level | ON
 ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter level | OFF
 ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix | ON  
 ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix | ON  
