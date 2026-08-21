@@ -324,7 +324,7 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 
 
-## vm's did not get DHCP ip adress
+## vm's did not get DHCP ip address
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
 
@@ -333,20 +333,60 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 
 # release notes 0499v4.1
-## !!! NEW !!!
-- proxmox has arrived (again) into 0499  
-  we have a 2 node cluster with PBS aka. proxmox backup server and PDM aka. proxmox datacenter manager !  
-  NFS shared storage is provided by nas.demo.local  
-  no local storage in the proxmox nodes for placing vm´s  
- 
-## changed
-- replaced minio with versityGW  
-- updated powerscale to version 9.13 LTS  
-- hyper-v s2d storage replaced with iscsi lun´s from nas.demo.local  
-  no local storage in the hyper-v nodes for placing vm´s  
-  
-## removed
-- none
+## 📦 Software updates
+
+- Dell PowerProtect Data Manager 20.3
+- Dell PowerProtect Cyber Recovery 20.3
+- Dell CyberSense 20.3, also known as CyberSense
+- Dell PowerProtect DD (Data Domain) 8.9
+- Dell PowerProtect Multisystem Reporting (MSR) 20.3
+- Dell PowerProtect DD Management Center (DDMC) 8.9
+
+## ✨ New
+
+### 🖥️ Proxmox cluster reintroduced
+
+Proxmox has been reintroduced into Lab 0499 with the following configuration:
+
+- Two-node Proxmox cluster
+- Proxmox Backup Server (PBS)
+- Proxmox Datacenter Manager (PDM)
+- NFS shared storage provided by `nas.demo.local`
+- No local storage is available on the Proxmox nodes for placing virtual machines
+
+## 🔄 Changed
+
+### 💾 Storage and infrastructure
+
+- Replaced MinIO with VersityGW.
+- Updated the Dell PowerScale cluster to OneFS 9.13 LTS.
+- Replaced Microsoft Hyper-V Storage Spaces Direct (S2D) storage with iSCSI LUNs provided by `nas.demo.local`.
+- No local storage is available on the Hyper-V nodes for placing virtual machines.
+- Relocated Ansible to the Dell Automation Platform (DAP) and enabled automatic startup.
+
+### ☸️ OpenShift
+
+- Updated the Red Hat OpenShift Container Platform cluster to 4.21.
+- Added a secondary network using ClusterUserDefinedNetwork (CUDN).
+- Added the Kubernetes NMState Operator to provide a physical bridge network with native access to the local network for virtual machines.
+- Added a ready-to-run test template for Dell PowerProtect DD Virtual Edition (DDVE) on OpenShift.
+
+## 🧹 Removed
+
+- None
+
+## Documentation references
+
+- [PowerProtect Data Manager Documentation Info Hub](https://www.dell.com/ppdmdocs)
+- [PowerProtect Cyber Recovery Documentation](https://www.dell.com/support/kbdoc/en-us/000132014/dell-emc-powerprotect-cyber-recovery-documents)
+- [CyberSense Engine Documentation](https://infohub.delltechnologies.com/en-us/l/ransomware-protection-secure-your-data-on-dell-powerflex-with-powerprotect-cyber-recovery-1/cybersense-engine-documentation/)
+- [PowerProtect and Data Domain Core Documents](https://www.dell.com/support/kbdoc/en-us/000126375/powerprotect-and-data-domain-core-documents)
+- [PowerProtect Multisystem Reporting 20.2 Installation and Administration Guide](https://dl.dell.com/content/manual27223401-dell-powerprotect-multisystem-reporting-20-2-installation-and-administration-guide.pdf?language=en-us)
+- [PowerScale OneFS 9.13.0.0 Web Administration Guide](https://www.dell.com/support/manuals/en-us/isilon-onefs/ifs-pub-91300-administration-guide-gui/about-this-guide?guid=guid-ac11e933-9cea-4ef3-be03-7841c2e35ec9&lang=en-us)
+- [Dell Automation Platform Manuals](https://www.dell.com/support/product-details/en-us/product/dell-automation-platform-components/resources/manuals)
+
+&nbsp;
+--------
 
 
 ---
