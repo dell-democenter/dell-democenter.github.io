@@ -1,21 +1,22 @@
-# **[click here for actual issues](#actual-issues) | [click here for release notes](#release-notes-0499v40) of 0499v4.0**
+# **[click here for actual issues](#actual-issues) | [click here for release notes](#release-notes-0499v41) of 0499v4.1**
 
 
 # **$\color{red}{\textsf{ATTENTION: PLEASE READ FIRST THE RELEASE NOTES !!! }}$**
 
 # what is HOL-0499 ?  
-### 0499 gives you a personal lab that represents a more or less “realistic” customer environment with several workloads.
+### 0499 gives you a lab that represents a more or less “realistic” customer environment with several workloads.
 ### 0499 gives you the opportunity to install and configure Dell Technologies products:
 - to gain experience on your own to be come a trusted advisor
 - to prepare an individually tailored customer demo
 - to recreate customer scenarios
 - to reproduce "issues" ;-)
 
+---
+
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
 ### systems / workloads / connectivity 
-<img width="1291" height="712" alt="image" src="https://github.com/user-attachments/assets/425d3793-fbb5-4a28-88c5-62f3f77f2ea3" />
-
+<img width="1675" height="787" alt="image" src="https://github.com/user-attachments/assets/d4c03f02-8b83-4678-9e13-d0ff13eeb054" />
 
 
 ### Note on VLAN2
@@ -23,9 +24,15 @@ VLAN2 is for storage+backup traffic "prepared". VLAN2 has the ip subnet 192.168.
 esxi servers already have kernel interfaces. ppdm is already using it for DR backup. powerstore has already connect with data interfaces.  
 connect your systems, like your ddve, to VLAN2 if traffic "separation" is wanted ;-)
 
+
+---
+
+
 # FQDN and DNS suffix  
 ***.demo.local** is the usual DNS suffix   
 naming policy is: use ALWAYS FQDN !!!
+
+---
 
 # account and passwords  
 Username depends, as always, on the workload or the device you want to login or manage   
@@ -38,6 +45,8 @@ vault-ppdm | root/changeme | ppdm in the vault | OS level
 vault-ppdm | admin/@ppAdm1n | ppdm in the vault | app level
 nve-1 | root passphrase "Password123" | NVE upgrade | without exclamation mark
 
+---
+
 # workloads
 FDQN | account | workload  |  notes  | runs on | default state  
 ------|---------------------|------------|-----------|-------------|------------  
@@ -45,13 +54,16 @@ portal | admin | Dell Automation Platform aka. DAP | portal and orchestrator | v
 edge-node | N/A | native edge node | compute and storage for vm´s | democenter level | ON
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level | ON
 esxi01+02 | root | esxi | broadcomm hypervisors | democenter level | ON 
+proxmox1+2 | root | PVE | proxmox node with KVM hypervisor | democenter level | OFF
+pdm | root | proxmox datacenter manager | for managing multiple proxmox cluster | proxmox level | ON
+pbs | root | proxmox backup server | proxmox own backup appliance | proxmox level | ON
 ntnx-node | root | Nutanix WebUI  | nutanix hypervisor aka. AHV | democenter level | OFF
 ntnx-node-cvm | nutanix | nutanix CVM | controls the AHV node | nutanix | ON  
 ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix | ON  
 nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to nutanix | nutanix | OFF
 nas | admin | NFS / SMB / HTTP / S3 central datastore | rocky linux and zfs | democenter level | ON
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNS | | democenter level | ON
-ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware | OFF
+ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | DAP | ON
 ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level | ON
 ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level | ON
 sql01+02 | administrator@demo.local | SQL 2019 AAG  | |	running on hyper-v | OFF
@@ -90,6 +102,8 @@ vault-ddve | sysadmin | PPDD for the vault | the separated protection target  | 
 cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager | vmware | OFF
 cs | admin |	CyberSense  | Optional deep forensic  | vmware | OFF
 
+
+---
 
 # systems in detail  
 ## launchpad  
@@ -135,6 +149,9 @@ some pre-defnined session available like:
 S3 connect to nas.demo.local for local artifacts 
 SCP connect to deft.dell.com for remote artifacts   
 
+### brows3 
+specialized for S3 and fast as hell.
+
 ## vcenter01 (by broadcom)
 use either "admin@vsphere.local" or "windows session authentication". user "administrator@vpshere.local" is locked due to license agreement with broadcom. if you need to create "user accounts" in vsphere use AD user from "demo.local". 
 
@@ -176,7 +193,7 @@ some storage virtual machine for CIFS / NFS /iSCSI are already prepared
 try some DNAS backup with ppdm or import external ontap storage with powerstore
 
 ## powerscale
-fresh deployed, joinded the ADS demo.local domain. has some file in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
+fresh deployed, joinded the ADS demo.local domain. has some files in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
 
 ## openshift
 3 node openshift cluster with virtualization. intend to be used for demontrating the K8s and vm workload in PPDM
@@ -189,7 +206,7 @@ is running rocky linux and doing the NFS datstore job for the esxi servers. DONT
 addiontally to the NFS job there is are artifacts accesible via SMB/HTTP/S3 with simultaneous access  
 SMB on lauchpad look for "Z: drive letter" or "\\\nas.demo.local\artifacts\artifacts"     
 HTTP open your browser or curl or wget or you name it and locate to "http://nas.demo.local"  
-S3 open your S3 tool like pre-installed winscp and locate to http://nas.demo.local:9000/artifacts
+S3 open your S3 tool like pre-installed winscp or brows3 and locate to http://nas.demo.local:9000/artifacts
 
 ## scvmm (system center virtual machine manager)
 the old style way to manage vm´s
@@ -209,6 +226,8 @@ some kind of "manager of managers" aka. vcenter. prismcentral aka. PC can contro
 ## syslog
 thats a greylog server with 3 running "inputs" UDP:514 / TCP:514 / TLS:6514  
 FYI: if you want to use TLS on your device you have to "trust" the cetificate chain
+
+---
 
 
 # actual issues 
@@ -305,11 +324,79 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 
 
-## vm's did not get DHCP ip adress
+## vm's did not get DHCP ip address
 - networking issue in the underlying democenter infrastructure.
 - cancel the lab and deploy a new one
 
 
+---
+
+
+# release notes 0499v4.1
+## 📦 Software updates
+
+- Dell PowerProtect Data Manager 20.3
+- Dell PowerProtect Cyber Recovery 20.3
+- Dell CyberSense 20.3, also known as CyberSense
+- Dell PowerProtect DD (Data Domain) 8.9
+- Dell PowerProtect Multisystem Reporting (MSR) 20.3
+- Dell PowerProtect DD Management Center (DDMC) 8.9
+
+## ✨ New
+
+### option to differentiate your 0499 bookings
+- a desktop shortcut named "personalize my desktop"
+- it gives you the option to put some unique string to the status message on the upper right corner of your desktop
+  
+
+### 🖥️ Proxmox cluster reintroduced
+
+Proxmox has been reintroduced into Lab 0499 with the following configuration:
+
+- Two-node Proxmox cluster
+- Proxmox Backup Server (PBS)
+- Proxmox Datacenter Manager (PDM)
+- NFS shared storage provided by `nas.demo.local`
+- No local storage is available on the Proxmox nodes for placing virtual machines
+
+## 🔄 Changed
+
+### 💾 Storage and infrastructure
+
+- Replaced MinIO with VersityGW.
+- Updated the Dell PowerScale cluster to OneFS 9.13 LTS.
+- Replaced Microsoft Hyper-V Storage Spaces Direct (S2D) storage with iSCSI LUNs provided by `nas.demo.local`.
+- No local storage is available on the Hyper-V nodes for placing virtual machines.
+- Relocated Ansible to the Dell Automation Platform (DAP) and enabled automatic startup.
+
+### ☸️ OpenShift
+
+- Updated the Red Hat OpenShift Container Platform cluster to 4.21.
+- Added a secondary network using ClusterUserDefinedNetwork (CUDN).
+- Added the Kubernetes NMState Operator to provide a physical bridge network with native access to the local network for virtual machines.
+- Added a ready-to-run test template for Dell PowerProtect DD Virtual Edition (DDVE) on OpenShift.
+
+## 🧹 Removed
+
+- None
+
+## Documentation references
+
+- [PowerProtect Data Manager Documentation Info Hub](https://www.dell.com/ppdmdocs)
+- [PowerProtect Cyber Recovery Documentation](https://www.dell.com/support/kbdoc/en-us/000132014/dell-emc-powerprotect-cyber-recovery-documents)
+- [CyberSense Engine Documentation](https://infohub.delltechnologies.com/en-us/l/ransomware-protection-secure-your-data-on-dell-powerflex-with-powerprotect-cyber-recovery-1/cybersense-engine-documentation/)
+- [PowerProtect and Data Domain Core Documents](https://www.dell.com/support/kbdoc/en-us/000126375/powerprotect-and-data-domain-core-documents)
+- [PowerProtect Multisystem Reporting 20.2 Installation and Administration Guide](https://dl.dell.com/content/manual27223401-dell-powerprotect-multisystem-reporting-20-2-installation-and-administration-guide.pdf?language=en-us)
+- [PowerScale OneFS 9.13.0.0 Web Administration Guide](https://www.dell.com/support/manuals/en-us/isilon-onefs/ifs-pub-91300-administration-guide-gui/about-this-guide?guid=guid-ac11e933-9cea-4ef3-be03-7841c2e35ec9&lang=en-us)
+- [Dell Automation Platform Manuals](https://www.dell.com/support/product-details/en-us/product/dell-automation-platform-components/resources/manuals)
+
+&nbsp;
+--------
+
+
+---
+
+ 
 # release notes 0499v4.0
 ## !!! NEW !!!
 - awsome stuff arrived: $${\color{green}"self \space service \space vm \space control"}$$ 
@@ -331,6 +418,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ## removed
 - none
 
+---
+
+
 # release notes 0499v3.7
 ## new
 - nas extended with SMB / HTTP / S3 simultaneous access.
@@ -343,6 +433,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 ## removed
 - none
+
+
+---
 
 # release notes 0499v3.6
 ## new
@@ -361,6 +454,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - promox PVE and PBS
   
 
+---
+
 # release notes 0499v3.5
 ## new
 - hana01 + hana02 with SLES15 SP7 and HANA 2.0 SPS08
@@ -372,6 +467,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - none
 
 
+---
+
 # release notes 0499v3.4
 ## new
 - 2FAGuard tool for scan TOTP tokens
@@ -382,6 +479,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 ## removed
 - none
+
+
+---
 
 # release notes 0499v3.3
 ## new
@@ -399,6 +499,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 ## removed
 - none
+
+---
 
 # release notes 0499v3.2
 ## new
@@ -418,6 +520,8 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ## removed
 -  esxi node3  
 
+
+---
 
 
 # release notes 0499v3.1
