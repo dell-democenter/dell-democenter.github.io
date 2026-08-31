@@ -1,7 +1,7 @@
 # **[click here for actual issues](#actual-issues) | [click here for release notes](#release-notes-0499v41) of 0499v4.1**
 
 
-# **$\color{red}{\textsf{ATTENTION: WIP !!! PLEASE READ FIRST THE RELEASE NOTES !!! }}$**
+# **$\color{red}{\textsf{ATTENTION: PLEASE READ FIRST THE RELEASE NOTES !!! }}$**
 
 # what is HOL-0499 ?  
 ### 0499 gives you a lab that represents a more or less “realistic” customer environment with several workloads.
@@ -343,6 +343,11 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 - Dell PowerProtect DD Management Center (DDMC) 8.9
 
 ## ✨ New
+
+### option to differentiate your 0499 bookings
+- a desktop shortcut named "personalize my desktop"
+- it gives you the option to put some unique string to the status message on the upper right corner of your desktop
+  
 
 ### 🖥️ Proxmox cluster reintroduced
 
