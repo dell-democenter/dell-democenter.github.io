@@ -63,7 +63,7 @@ ntnx-prismcentral | admin | nutanix prismcentral | like a vcenter | nutanix | ON
 nutanix-move | nutanix | nutanix move | migrate vm´s from other hypervisors to nutanix | nutanix | OFF
 nas | admin | NFS / SMB / HTTP / S3 central datastore | rocky linux and zfs | democenter level | ON
 launchpad | administrator@demo.local | YOUR jumpbox is AD controller for “demo.local” and DHCP + DNS | | democenter level | ON
-ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | vmware | OFF
+ansible | admin | ansible jumphost for ansbile CLI automation | filled with wonderful automation magic from karsten | DAP | ON
 ddve-01 | sysadmin | PP DataDomain | primary protection target | democenter level | ON
 ddve-02 | sysadmin | PP DataDomain | secondary protection target | democenter level | ON
 sql01+02 | administrator@demo.local | SQL 2019 AAG  | |	running on hyper-v | OFF
