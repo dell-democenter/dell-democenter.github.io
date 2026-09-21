@@ -77,7 +77,7 @@ hana01  |		H01adm  |		hana hxe 2.0 SPS08  | user **SYSTEM** for backup | vmware 
 hana02  |		H02adm  |		hana hxe 2.0 SPS08  | user **SYSTEM** for backup | vmware | OFF
 ocpnode0+1+2  |		kubeadmin  |		openshift cluster  | Kubernetes + virtualization from RedHat |  democenter level | OFF
 powerscale  |		root  |		Isilon oneFS | perfect NAS workload for PPDM DNAS/ joined demo.local AD  | vmware | OFF
-powerstore-1+2  |		admin  |	PowerOS |  perfect block workload for PPDM Storge Direct / joined demo.local AD  | vmware | OFF
+powerstore-1+2  |		admin  |	Powerstore OS |  perfect block workload for PPDM Storge Direct and DNAS/ joined demo.local AD  | vmware | OFF
 scvmm  |		administrator@demo.local  |		system center virtual machine manager  |	old stlye UI for central managing vm´s | hyper-v | ON 
 wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  | hyper-v | ON
 nve-1  |		administrator  |		Networker  |	legay dataprotection 	| vmware | OFF
@@ -184,9 +184,14 @@ fresh deployed, nothing configured
 fresh deployed, nothing configured
 
 ## powerstore´s
-fresh deployed, initial network configuration done. both systems are connected for replication and metro. 
-storage network for iscsi / NVMeTCP / replication is in VLAN2, so if you want to use storage configure your device to VLAN2
-intend to be used when demonstrating synergy between dell primary storage <> backup storage, orchestrated by PowerProtect  
+fresh deployed, initial network configuration done.   
+both systems are ready to be connected for replication and metro. 
+storage network for iscsi / NVMeTCP / replication is in VLAN2, so if you want to consume storage configure your device to VLAN2  
+intend to be used when demonstrating synergy between dell primary storage <> backup storage, orchestrated by PowerProtect    
+now with powerstore os 5.0.0.2 and PPDM 20.3 we are able to protect metro volumes  
+nice extra is powerstore VSA´s are to running NAS services  
+ready to demonstrate PPDM DNAS feature super tight integrated with powerstore !  
+
  
 ## ontap simulator
 ontap 2 node cluster with no shared backend (simulator limit)  
