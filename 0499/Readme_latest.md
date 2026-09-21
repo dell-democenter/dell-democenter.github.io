@@ -1,4 +1,4 @@
-# **[click here for actual issues](#actual-issues) | [click here for release notes](#release-notes-0499v41) of 0499v4.1**
+# **[click here for actual issues](#actual-issues) | [click here for release notes](#release-notes-0499v42) of 0499v4.2**
 
 
 # **$\color{red}{\textsf{ATTENTION: PLEASE READ FIRST THE RELEASE NOTES !!! }}$**
@@ -16,7 +16,8 @@
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
 ### systems / workloads / connectivity 
-<img width="1675" height="787" alt="image" src="https://github.com/user-attachments/assets/d4c03f02-8b83-4678-9e13-d0ff13eeb054" />
+<img width="1455" height="675" alt="image" src="https://github.com/user-attachments/assets/3d3e81fe-5dfa-4b99-a9a3-2deef9a468b0" />
+
 
 
 ### Note on VLAN2
@@ -75,8 +76,8 @@ file  |		administrator@demo.local  |		Win 2022 file server  |		Central file serv
 hana01  |		H01adm  |		hana hxe 2.0 SPS08  | user **SYSTEM** for backup | vmware | OFF
 hana02  |		H02adm  |		hana hxe 2.0 SPS08  | user **SYSTEM** for backup | vmware | OFF
 ocpnode0+1+2  |		kubeadmin  |		openshift cluster  | Kubernetes + virtualization from RedHat |  democenter level | OFF
-powerscale  |		root  |		Isilon oneFS | treated as NAS workload / joined demo.local AD  | vmware | OFF
-powerstore-1+2  |		admin  |	PowerOS | treated as NAS workload / joined demo.local AD  | vmware | OFF
+powerscale  |		root  |		Isilon oneFS | perfect NAS workload for PPDM DNAS/ joined demo.local AD  | vmware | OFF
+powerstore-1+2  |		admin  |	Powerstore OS |  perfect block workload for PPDM Storge Direct and DNAS/ joined demo.local AD  | vmware | OFF
 scvmm  |		administrator@demo.local  |		system center virtual machine manager  |	old stlye UI for central managing vm´s | hyper-v | ON 
 wac  |		administrator@demo.local  |		Windows Admin Center  |		nice UI for central managing windows machines  | hyper-v | ON
 nve-1  |		administrator  |		Networker  |	legay dataprotection 	| vmware | OFF
@@ -183,9 +184,15 @@ fresh deployed, nothing configured
 fresh deployed, nothing configured
 
 ## powerstore´s
-fresh deployed, initial network cinfiguration done. both systems are connected for replication and metro. 
-intend to be used when demonstrating synergy between dell primary storage <> backup storage, orchestrated by PowerProtect
+fresh deployed, initial network configuration done.   
+both systems are ready to be connected for replication and metro. 
+storage network for iscsi / NVMeTCP / replication is in VLAN2, so if you want to consume storage configure your device to VLAN2  
+intend to be used when demonstrating synergy between dell primary storage <> backup storage, orchestrated by PowerProtect    
+now with powerstore os 5.0.0.2 and PPDM 20.3 we are able to protect metro volumes  
+nice extra is powerstore VSA´s are to running NAS services  
+ready to demonstrate PPDM DNAS feature super tight integrated with powerstore !  
 
+ 
 ## ontap simulator
 ontap 2 node cluster with no shared backend (simulator limit)  
 managing with virtual cluster name ontap-cluster.demo.local or IP 192.168.1.70  
@@ -193,7 +200,7 @@ some storage virtual machine for CIFS / NFS /iSCSI are already prepared
 try some DNAS backup with ppdm or import external ontap storage with powerstore
 
 ## powerscale
-fresh deployed, joinded the ADS demo.local domain. has some files in the \\powerscale\data SMB share. intend to be used for demontrating the DNAS workload in PPDM.
+fresh deployed, joinded the ADS demo.local domain. has some files in the \\powerscale\data SMB share. intend to be used for demonstrating the DNAS workload in PPDM.
 
 ## openshift
 3 node openshift cluster with virtualization. intend to be used for demontrating the K8s and vm workload in PPDM
@@ -330,6 +337,25 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 
 ---
+
+# release notes 0499v4.2
+## 📦 Software updates
+
+- Powerstore OS to v5.0.0.2
+
+## ✨ New
+
+### extra esxi server "ps-esxi" 
+- running two seperate powerstore VSA´s appliances 
+- this combination of powerstore OS 5.x and PPDM 20.3 start now with metro-volume support  
+
+## 🔄 Changed
+
+- powerstore appliances are now two node systems
+
+## 🧹 Removed
+
+- DPC (data protection central)
 
 
 # release notes 0499v4.1
