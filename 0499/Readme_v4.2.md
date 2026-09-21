@@ -16,7 +16,8 @@
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
 ### systems / workloads / connectivity 
-<img width="1675" height="787" alt="image" src="https://github.com/user-attachments/assets/d4c03f02-8b83-4678-9e13-d0ff13eeb054" />
+<img width="1455" height="675" alt="image" src="https://github.com/user-attachments/assets/3d3e81fe-5dfa-4b99-a9a3-2deef9a468b0" />
+
 
 
 ### Note on VLAN2
@@ -341,15 +342,15 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 
 ### extra esxi server "ps-esxi" 
 - running two seperate powerstore VSA´s appliances 
-- thi scombination of powerstore OS 5.x and PPDM 20.3 start now with metro-volume support  
+- this combination of powerstore OS 5.x and PPDM 20.3 start now with metro-volume support  
 
 ## 🔄 Changed
 
-- None
+- powerstore appliances are now two node systems
 
 ## 🧹 Removed
 
-- None
+- DPC (data protection central)
 
 
 # release notes 0499v4.1
