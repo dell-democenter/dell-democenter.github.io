@@ -16,7 +16,8 @@
 # lab overview - what systems are running where ?
 please always check this overview and the corresponding table below !!!
 ### systems / workloads / connectivity 
-<img width="1455" height="675" alt="image" src="https://github.com/user-attachments/assets/3d3e81fe-5dfa-4b99-a9a3-2deef9a468b0" />
+<img width="1167" height="557" alt="image" src="https://github.com/user-attachments/assets/34cac6e8-ca11-44ee-ab8b-81ed4015e329" />
+
 
 
 
@@ -54,7 +55,8 @@ FDQN | account | workload  |  notes  | runs on | default state
 portal | admin | Dell Automation Platform aka. DAP | portal and orchestrator | vmware | ON
 edge-node | N/A | native edge node | compute and storage for vm´s | democenter level | ON
 vcenter01 | admin@vsphere.local | vsphere | The production vcenter | democenter level | ON
-esxi01+02 | root | esxi | broadcomm hypervisors | democenter level | ON 
+esxi01+02 | root | esxi | all usual workloads | democenter level | ON 
+ps-esxi | root | esxi | dedicated to powerstore´s | democenter level | OFF  
 proxmox1+2 | root | PVE | proxmox node with KVM hypervisor | democenter level | OFF
 pdm | root | proxmox datacenter manager | for managing multiple proxmox cluster | proxmox level | ON
 pbs | root | proxmox backup server | proxmox own backup appliance | proxmox level | ON
@@ -183,7 +185,7 @@ fresh deployed, nothing configured
 ## DPC
 fresh deployed, nothing configured
 
-## powerstore´s
+## powerstore (you need to poweron the ps-esxi vm first !!! )
 fresh deployed, initial network configuration done.   
 both systems are ready to be connected for replication and metro. 
 storage network for iscsi / NVMeTCP / replication is in VLAN2, so if you want to consume storage configure your device to VLAN2  
@@ -191,7 +193,6 @@ intend to be used when demonstrating synergy between dell primary storage <> bac
 now with powerstore os 5.0.0.2 and PPDM 20.3 we are able to protect metro volumes  
 nice extra is powerstore VSA´s are to running NAS services  
 ready to demonstrate PPDM DNAS feature super tight integrated with powerstore !  
-
  
 ## ontap simulator
 ontap 2 node cluster with no shared backend (simulator limit)  
@@ -348,6 +349,9 @@ if web UI still not accessible after 60 seconds do a "restart guest OS" via vcen
 ### extra esxi server "ps-esxi" 
 - running two seperate powerstore VSA´s appliances 
 - this combination of powerstore OS 5.x and PPDM 20.3 start now with metro-volume support  
+<img width="937" height="395" alt="image" src="https://github.com/user-attachments/assets/541b12d5-3642-4757-aa48-b069edf31566" />
+- if you want to use powerstore ? - PowerON the ps-esxi FIRST !  
+
 
 ## 🔄 Changed
 
