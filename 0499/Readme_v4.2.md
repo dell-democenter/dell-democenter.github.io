@@ -185,7 +185,7 @@ fresh deployed, nothing configured
 ## DPC
 fresh deployed, nothing configured
 
-## powerstore (you need to poweron the ps-esxi vm first !!! )
+## powerstore (you need to power-on the ps-esxi vm first !!! )
 fresh deployed, initial network configuration done.   
 both systems are ready to be connected for replication and metro. 
 storage network for iscsi / NVMeTCP / replication is in VLAN2, so if you want to consume storage configure your device to VLAN2  
@@ -240,7 +240,27 @@ FYI: if you want to use TLS on your device you have to "trust" the cetificate ch
 
 # actual issues 
 
+## powerstore node goes offline (SOLUTION)
+the VSA is some kind of petty when it comes to the the shared "simulated nvram", it is a vmdk disk...  
+it´s just sometimes not fast enough and the node does a "rescue reboot" 🤷‍♂️
 
+in the powerstore UI you got the error "NODE A or B entered service mode"  
+<img width="759" height="301" alt="image" src="https://github.com/user-attachments/assets/e3a39f5e-24a8-41d3-a903-00a41a3825a3" />
+FYI: as in real life, one running powerstore node is enough to serve all powerstore services 💪  
+
+if you want the node back to service, do the following steps.
+- ssh into the related node via mremoteNG
+```bash
+svc_rescue_state clear
+```
+- wait 5-10 seconds
+```bash
+svc_node reboot local -f
+```
+- wait 5-10 minutes and the error in the powerstore UI should disappear   
+
+
+## openshuft realted stuff  
 Onboard /  Discover K8S , then patch / aprove the installplan
 
 
