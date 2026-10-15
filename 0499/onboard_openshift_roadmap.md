@@ -52,7 +52,7 @@ ansible-playbook ~/workspace/ansible_ppdm/130.1_playbook_rbac_add_k8s_to_ppdm.ya
 
    * Run a small **test protection and restore** on a non-critical namespace to confirm end-to-end functionality before putting customer workloads under policy.
   
-## Cleanup
+## Cleanup ( removes ppdm resources from cluster for re-boarding )
 ```bash
 oc delete crd -l app.kubernetes.io/part-of=powerprotect.dell.com
 oc delete clusterrolebinding powerprotect:cluster-role-binding
