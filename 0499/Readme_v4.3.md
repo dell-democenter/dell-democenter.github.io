@@ -99,8 +99,8 @@ msr | admin | multi sytems reporting | ppdm-1 already onboarded | DAP | ON
 syslog | admin | a graylog syslog server | usual UDP - TCP - TLS inputs | DAP | ON 
 ******** | ******** | ******** | ******** | ********
 vault-esxi | root | esxi | for simulating a CR vault area  | demonceter level | OFF
-vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware | OFF  
-vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen” | vmware | ON
+vault-vcenter |	admin@vsphere.local | vSphere for the vault|The separated vcenter in the vault | vmware | ON  
+vault-ppdm | root/changeme | ppdm for the vault | ppdm is waiting in “install screen” | vmware | OFF
 vault-ddve | sysadmin | PPDD for the vault | the separated protection target  | vmware | OFF
 cr | crso + cradmin | PPCR for the vault | vault CyberRecovery Manager | vmware | OFF
 cs | admin |	CyberSense  | Optional deep forensic  | vmware | OFF
